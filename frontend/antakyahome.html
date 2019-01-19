@@ -55,9 +55,40 @@
       <!--Bejelentkező div-->
       <div class="login-box">
         <p>Kérjük, hogy az egyéni kedvezményekhez és a gyorsabb rendeléshez jelentkezzen be. Ha nincs fiókja regisztráljon.</p>
-        <button type="button" name="login" class="login">Bejelentkezés</button>
+        <button type="button" name="login" class="login" onclick="document.getElementById('id01').style.display = 'block'">Bejelentkezés</button>
         <button type="button" name="registration-link" class="registration-link"><a href="#">Regisztráció</a></button>
       </div>
+
+      <!--Felugró bejelentkező ablak-->
+      <div class="modal" id="id01">
+        <form class="modal-content animate" action="index.html"> <!--felugró ablak lejátszása és a megfelelő helyre küldő modul-->
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span> <!--X-gomb-->
+            <img src="img_avatar.png" alt="avatár-kép" class="avatar"><!--avatár-kép-->
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Felhasználónév</b></label>
+            <input type="text" name="uname" id="uname" placeholder="Írja be a felhasználónevét!" required>
+
+            <label for="psw"><b>Jelszó</b></label>
+            <input type="password" name="psw" id="password" placeholder="Írja be a jelszavát!" required>
+
+            <button type="submit" class="bej">Bejelentkezés</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember">Emlékezz rám</label>
+          </div>
+
+          <div class="container">
+            <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Mégse</button>
+            <span class="psw"><a href="###">Elfelejtette jelszavát?</a></span>
+          </div>
+        </form>
+
+      </div>
+
+
+
 
       <!--Szerkeszthető tartalom-->
       <div class="edited-part">
@@ -95,6 +126,9 @@
           </pre>
         </div>
     </footer>
+
+<script src="bejelentkezo-ablak.js"></script>
+
 
 
   </body>
