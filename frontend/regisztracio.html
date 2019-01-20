@@ -2,6 +2,15 @@
 <html lang="hu" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="hu"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="hu"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="hu"> <![endif]-->
+<!--[if gt IE 8]><!-->
     <title>Registráció - Antakya Török Büfé</title>
     <link rel="stylesheet" href="regisztracio.css">
   </head>
@@ -27,9 +36,8 @@
         <input type="password" name="pass2" class="down" placeholder="Írja be jelszavát még egyszer!" required><br>
       </form>
     </div>
-    <button type="submit" name="submit" class="reg">Regisztráció</button><br>
-    <button type="button" onclick="antakyahome.html" class="megse">Mégse</button><br>
-
+    <button type="submit" name="submit" class="reg" onclick="window.location.href='antakyahome.html'">Regisztráció</button><br>
+    <button type="button" class="megse" onclick="window.location.href='antakyahome.html'">Mégse</button><br>
 
   </body>
 </html>

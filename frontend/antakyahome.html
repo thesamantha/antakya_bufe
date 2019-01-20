@@ -46,6 +46,7 @@
         <li><a href="antakya_we.html">Rólunk</a></li>
         <li><a href="antakya_intresting.html">Érdekességek</a></li>
         <li><a href="antakya_akciok.html">Akciók</a></li>
+        <img src="facebook.png" id="facebook" alt="facebook-icon">
       </ul>
 
     </nav>
@@ -56,8 +57,9 @@
       <div class="login-box">
         <p>Kérjük, hogy az egyéni kedvezményekhez és a gyorsabb rendeléshez jelentkezzen be. Ha nincs fiókja regisztráljon.</p>
         <button type="button" name="login" class="login" onclick="document.getElementById('id01').style.display = 'block'">Bejelentkezés</button>
-        <button type="button" name="registration-link" class="registration-link"><a href="#">Regisztráció</a></button>
+        <button type="button" name="registration-link" class="registration-link" onclick="window.location.href='regisztracio.html'">Regisztráció</button>
       </div>
+      <hr>
 
       <!--Felugró bejelentkező ablak-->
       <div class="modal" id="id01">
@@ -91,16 +93,21 @@
 
 
       <!--Szerkeszthető tartalom-->
-      <div class="edited-part">
+      <div id="edited-content">
 
       </div>
+
+      <textarea name="editor" id="editor" placeholder="Anya, ide írd amit a hírfolyamban akarsz látni!"></textarea><br>
+      <button type="button" class="editor-btn" onclick="textEdit()">Szerkeszt</button>
+
     </main>
-    <hr>
+    <hr class="moving">
 
     <footer>
       <!--Térkép-->
-      <div class="googlemaps">
-
+      <div class="googleMap">
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1348.7621347454678!2d18.957385301740427!3d47.46021218773051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf733ddcf8761dd5!2zQW50YWt5YSBEw7ZuZXIgVMO2csO2ayBCw7xmw6k!5e0!3m2!1shu!2shu!4v1548010867984"
+         width="350" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
 
       <div class="social-media">
@@ -109,7 +116,7 @@
 
       <!--Információk a lap alján is legyenek-->
       <div class="footer-infos">
-        <pre>
+        <pre id="shop_adress">
           2040 Budaörs Szabadság út 55.
           Tel.:06 70 251 1255
           rendeles.antakya@gmail.com
@@ -128,7 +135,8 @@
     </footer>
 
 <script src="bejelentkezo-ablak.js"></script>
-
+<script src="editor.js"></script>
+<script src="googleMaps.js"></script>
 
 
   </body>
