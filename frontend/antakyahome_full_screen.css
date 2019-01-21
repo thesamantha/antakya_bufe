@@ -1,4 +1,4 @@
-@media only screen and (min-width: 931px) {
+@media only screen and (min-width: 1000px) {
 
   /*Háttér és betűszín*/
   body {
@@ -42,14 +42,22 @@
     padding:14px 16px;
     text-decoration: none;
     font-size: 1.5em;
+    border-bottom: 0;
+    width: auto;
   }
   li:hover a:hover {background-color: green;}
   #facebook {
-  
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 0.08em 0.1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 2em;
+    float: right;
   }
-
-
-
+  #facebook:hover {background-color: inherit;}
 
   nav {position: relative; bottom: 10em}
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -60,7 +68,6 @@
     position: relative;
     bottom: 10em;
   }
-
   .login, .registration-link {
     border: 1px solid black;
     background-color: green;
@@ -197,7 +204,17 @@
 
   #open_hours2 {text-align: right; position: relative; bottom: 8em;}
   #map {position: relative; top: 15em; left: 2em; margin: auto; display: block; width: 27em; height: 20em;}
-
+  #facebook-bottom {
+    position: relative;
+    top: -3em;
+    left: 0;
+    margin: 0 1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3.5em;
+    float: right;
+  }
 
 
 

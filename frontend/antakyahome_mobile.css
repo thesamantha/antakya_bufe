@@ -41,6 +41,9 @@
      color: black;
   }
   li:hover a:hover {background-color: green;}
+  #facebook {display: none;}
+
+
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Bejelentkező és regisztrációs gomb*/
@@ -159,7 +162,16 @@
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Alláb*/
 #map {margin: auto; display: block; width: 95vw;}
-
+#facebook-bottom {
+  position: relative;
+  left: 0.8em;
+  display: block;
+  margin: 1em auto;
+  padding: 0;
+  border: 0px;
+  border-radius: 50%;
+  width: 3em;
+}
 
 
 

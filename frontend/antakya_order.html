@@ -12,7 +12,9 @@
 <html class="no-js lt-ie9" lang="hu"> <![endif]-->
 <!--[if gt IE 8]><!-->
     <title>Antakya Török Büfé - Budaörs</title>
-    <link rel="stylesheet" href="antakyahome_mobile.css">
+    <link rel="stylesheet" href="antakya_order_mobile.css">
+    <link rel="stylesheet" href="antakya_order_tablet.css">
+    <link rel="stylesheet" href="antakya_order_full_screen.css">
   </head>
   <body>
     <header>
@@ -23,8 +25,8 @@
          Tel.:06 70 251 1255
       rendeles.antakya@gmail.com
       (még nem aktív a rendelés)</pre>
-      <pre>
-      Nyitvatartás:
+      <pre id="open_hours">
+      <ins>Nyitvatartás:</ins>
       Hétfő      10:30-16:00
       Kedd       10:30-16:00
       Szerda     10:30-16:00
@@ -32,64 +34,132 @@
       Péntek     10:30-16:00
       Szombat    Zárva
       Vasárnap   Zárva</pre>
+    </header>
+
+    <nav>
 
       <!--Menü-->
+
       <ul>
         <li><a href="antakyahome.html">Kezdőlap</a></li>
         <li><a href="antakya_order.html">Étlap/Rendelés(később)</a></li>
         <li><a href="antakya_we.html">Rólunk</a></li>
         <li><a href="antakya_intresting.html">Érdekességek</a></li>
         <li><a href="antakya_akciok.html">Akciók</a></li>
+        <li><a href="antakya_galeria.html">Galéria</a></li>
+        <li id="facebook"><a href="https://www.facebook.com/antakyadonerbudaors/" id="facebook"><img src="facebook.png" id="facebook" alt="facebook-icon"></a></li>
       </ul>
-    </header>
+
+    </nav>
     <hr>
 
     <main>
       <!--Bejelentkező div-->
       <div class="login-box">
         <p>Kérjük, hogy az egyéni kedvezményekhez és a gyorsabb rendeléshez jelentkezzen be. Ha nincs fiókja regisztráljon.</p>
-        <button type="button" name="login" class="login">Bejelentkezés</button>
-        <button type="button" name="registration-link" class="registration-link"><a href="#">Regisztráció</a></button>
+        <button type="button" name="login" class="login" onclick="document.getElementById('id01').style.display = 'block'">Bejelentkezés</button>
+        <button type="button" name="registration-link" class="registration-link" onclick="window.location.href='regisztracio.html'">Regisztráció</button>
+      </div>
+      <hr>
+
+      <!--Felugró bejelentkező ablak-->
+      <div class="modal" id="id01">
+        <form class="modal-content animate" action="index.html"> <!--felugró ablak lejátszása és a megfelelő helyre küldő modul-->
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span> <!--X-gomb-->
+            <img src="img_avatar.png" alt="avatár-kép" class="avatar"><!--avatár-kép-->
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Felhasználónév</b></label>
+            <input type="text" name="uname" id="uname" placeholder="Írja be a felhasználónevét!" required>
+
+            <label for="psw"><b>Jelszó</b></label>
+            <input type="password" name="psw" id="password" placeholder="Írja be a jelszavát!" required>
+
+            <button type="submit" class="bej">Bejelentkezés</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember">Emlékezz rám</label>
+          </div>
+
+          <div class="container">
+            <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Mégse</button>
+            <span class="psw"><a href="###">Elfelejtette jelszavát?</a></span>
+          </div>
+        </form>
       </div>
 
-      <!--Szerkeszthető tartalom-->
-      <div class="edited-part">
+      <!--Táblázat-->
+      <table>
+          <tr>
+            <th>Kép</th>
+            <th>Név</th>
+            <th>Összetevők</th>
+            <th>Ár</th>
+            <th>Db</th>
+            <th>Rendelés</th>
+          </tr>
+          <tr>
+            <td><img src="kepek/tal.jpg" id="kepek" onclick="myFunction(this)" alt="Döner Tál"></td>
+            <td>Döner Tál</td>
+            <td>csirkehús, káposzta, répa, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, sültkrumpli, pita</td>
+            <td>1400 Ft</td>
+            <td><input type="number" class="c-num"></td>
+            <td><button type="button" class="ord-btn">Rendelés</button></td>
+          </tr>
+          <tr>
+            <td><img src="kepek/barany.jpg" id="kepek" onclick="myFunction(this) "alt="Bárány Döner"></td>
+            <td>Bárány Döner</td>
+            <td>darált bárányhús, répa, káposzta, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, lavas</td>
+            <td>890 Ft</td>
+            <td><input type="number" class="c-num"></td>
+            <td><button type="button" class="ord-btn">Rendelés</button></td>
+          </tr>
+      </table>
 
+      <!--Kép nagyító-->
+      <div id="imgModal" class="modal animate">
+          <span class="X">&times;</span>
+          <img class="modal--content" id="t-img">
+          <div id="caption"></div>
       </div>
+
     </main>
-    <hr>
+    <hr class="moving">
 
     <footer>
-      <!--Információk a lap alján is legyenek-->
-      <div class="footer-infos">
-        <pre>
-        2040 Budaörs Szabadság út 55.
-           Tel.:06 70 251 1255
-        rendeles.antakya@gmail.com
-        (még nem aktív a rendelés)</pre>
-        <pre>
-        Nyitvatartás:
-        Hétfő      10:30-16:00
-        Kedd       10:30-16:00
-        Szerda     10:30-16:00
-        Csütörtök  10:30-16:00
-        Péntek     10:30-16:00
-        Szombat    Zárva
-        Vasárnap   Zárva
-      </pre>
-      </div>
-
       <!--Térkép-->
-      <div class="googlemaps">
-
+      <div class="googleMap">
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1348.7621347454678!2d18.957385301740427!3d47.46021218773051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaf733ddcf8761dd5!2zQW50YWt5YSBEw7ZuZXIgVMO2csO2ayBCw7xmw6k!5e0!3m2!1shu!2shu!4v1548010867984"
+         width="350" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
 
       <div class="social-media">
-
+        <a href="https://www.facebook.com/antakyadonerbudaors/" id="facebook-bottom"><img src="facebook.png" id="facebook-bottom" alt="facebook-icon"></a>
       </div>
 
+      <!--Információk a lap alján is legyenek-->
+      <div class="footer-infos">
+        <pre id="shop_adress">
+          2040 Budaörs Szabadság út 55.
+          Tel.:06 70 251 1255
+          rendeles.antakya@gmail.com
+          (még nem aktív a rendelés)</pre>
+          <pre id="open_hours2">
+            <ins>Nyitvatartás:</ins>
+            Hétfő      10:30-16:00
+            Kedd       10:30-16:00
+            Szerda     10:30-16:00
+            Csütörtök  10:30-16:00
+            Péntek     10:30-16:00
+            Szombat    Zárva
+            Vasárnap   Zárva
+          </pre>
+        </div>
     </footer>
 
+<script src="bejelentkezo-ablak.js"></script>
+<script src="imgViewer.js"></script>
 
   </body>
 </html>

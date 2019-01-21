@@ -1,0 +1,262 @@
+@media only screen and (min-width: 1100px) {
+
+  /*Háttér és betűszín*/
+  body {
+    background-color: #b30000;
+    background-image: linear-gradient(#b30000, #ff0000);
+    color:orange;
+  }
+  hr {color: orange; position: relative; bottom: 10em;}
+  hr.moving {position: relative; top: 5em;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+  /*Fejléc*/
+  header {background-image: }
+  h2 {
+    font-size: 5em;
+    text-align: center;
+    font-family: sans-serif;
+    text-shadow: 2px 1px 1px black;
+  }
+  pre {
+    font-family: sans-serif;
+    font-size: 1.3em;
+  }
+  #open_hours {text-align: right; position: relative; bottom: 8em;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Kontrol menü*/
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: orange;
+  }
+  li {float: left; border-right:1px solid black;}
+
+  li a {
+    display: block;
+    color: black;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-bottom: 0;
+    width: auto;
+  }
+  li:hover a:hover {background-color: green;}
+  #facebook {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 0.08em 0.1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 2em;
+    float: right;
+  }
+  #facebook:hover {background-color: inherit;}
+
+  nav {position: relative; bottom: 10em}
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+  /*Bejelentkező és regisztrációs gomb*/
+
+  .login-box {
+    text-align: center;
+    position: relative;
+    bottom: 10em;
+  }
+
+  .login, .registration-link {
+    border: 1px solid black;
+    background-color: green;
+    color:orange;
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 5px;
+    max-width: 160px;
+    margin-top: 5px;
+  }
+  .login:hover, .registration-link:hover {background-color: blue; color: white}
+
+  .registration-link a:link {color:black; text-decoration: none;}
+  .registration-link a:visited {color:black; text-decoration: none;}
+  .registration-link a:hover {color:black; text-decoration: none;}
+  .registration-link a:active {color:black; text-decoration: none;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Felgró-bejelentkező  ablak*/
+
+  #uname, #password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  .bej {
+    border: 1px solid black;
+    background-color: green;
+    color:black;
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 5px;
+    max-width: 160px;
+    margin-top: 5px;
+  }
+
+  .cancelbtn {
+    width:auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    border: 1px solid #f44336;
+    border-radius: 5px;
+  }
+
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+
+  img.avatar {
+     width: 40%;
+     border-radius: 50%
+  }
+
+  .container {padding: 16px}
+
+  span.psw {float: right; padding-top: 16px;}
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 60px;
+  }
+
+  .modal-content {
+    background-color: orange;
+    color: black;
+    margin: 5% auto 15% auto;
+    border: 1px solid orange;
+    border-radius: 10px;
+    width: 80%;
+  }
+
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color:#000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover, .close:focus {color: red; cursor: pointer;}
+
+  .animate {
+    -webkit-animation: animatezoom 1s;
+    animation: animatezoom 1s;
+  }
+  @keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Táblázat*/
+  table, th, td {
+    border: 1.7px solid black;
+    border-collapse: collapse;
+  }
+  table {
+    position: relative;
+    bottom: 8em;
+  }
+  th, td {padding: 1em; text-align: center;}
+  th {background-color: green}
+  td {background-color: orange; color: black}
+
+  .ord-btn {
+    background-color: green;
+    color: orange;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  .ord-btn:hover {background-color: purple; color: }
+  .c-num {width: 4em;}
+   #kepek {
+    width: 4em;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Képnagyító*/
+  .modal--content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 600px;
+    max-height: 500px;
+  }
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  .X {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+  .X:hover, .X:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Alláb*/
+
+  #open_hours2 {text-align: right; position: relative; bottom: 8em;}
+  #map {position: relative; top: 15em; left: 2em; margin: auto; display: block; width: 27em; height: 20em;}
+  #facebook-bottom {
+    position: relative;
+    top: -3em;
+    left: 0;
+    margin: 0 1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3.5em;
+    float: right;
+  }
+
+
+
+
+}

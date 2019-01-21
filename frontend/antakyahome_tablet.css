@@ -29,18 +29,31 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: orange;
   }
   li a {
-    padding: 12px;
     display: block;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
     border-bottom: 2px solid #cc2900;
     width: 100%;
-     background-color: orange;
-     text-decoration: none;
-     text-align: center;
-     color: black;
    }
   li:hover a:hover {background-color: green;}
+  #facebook {
+    margin: auto;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3em;
+    position: absolute;
+    bottom: 6em;
+    left: 15.5vw;
+  }
+  #facebook:hover {background-color: red;}
+
+
   nav {position: relative; bottom: 10em;}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -172,7 +185,17 @@
   #open_hours2 {text-align: right; position: relative; bottom: 6.7em;}
   .moveup-hr {position: relative; }
   #map {margin: auto; display: block; width: 95vw;}
-
+    #facebook-bottom {
+    position: relative;
+    left: 1.5em;
+    top: 3em;
+    display: block;
+    margin: auto;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3em;
+  }
 
 
 
