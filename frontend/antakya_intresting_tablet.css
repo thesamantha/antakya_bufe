@@ -54,6 +54,7 @@
   }
   #facebook:hover {background-color: red;}
 
+
   nav {position: relative; bottom: 10em;}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -179,27 +180,12 @@
       from {transform: scale(0)}
       to {transform: scale(1)}
     }
-/*-------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Hírfolyam*/
-  #edited-content {
-    background-color: rgba(255, 153, 0, 0.15);
-    border-top: 3px solid orange;
-    border-bottom: none;
-    border-radius: 10px;
-    margin: 0 auto 3em auto;
-    padding: 1em;
-    text-align: center;
-    font-size: 1.1em;
-    position: relative;
-    bottom: 5em;
-    max-width: 60em;
-  }
 
-/*-------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Alláb*/
-  #open_hours2 {text-align: right; position: relative; bottom: 6.7em;}
-  .moveup-hr {position: relative; }
-  #map {margin: auto; display: block; width: 95vw;}
+  /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+  /*Alláb*/
+    #open_hours2 {text-align: right; position: relative; bottom: 6.7em;}
+    .moveup-hr {position: relative; }
+    #map {margin: auto; display: block; width: 95vw;}
     #facebook-bottom {
     position: relative;
     left: 1.5em;

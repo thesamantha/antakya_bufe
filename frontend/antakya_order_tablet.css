@@ -49,10 +49,11 @@
     border-radius: 50%;
     width: 3em;
     position: absolute;
-    bottom: 6em;
+    bottom: 6.5em;
     left: 15.5vw;
   }
   #facebook:hover {background-color: red;}
+
 
   nav {position: relative; bottom: 10em;}
 
@@ -179,26 +180,70 @@
       from {transform: scale(0)}
       to {transform: scale(1)}
     }
-/*-------------------------------------------------------------------------------------------------------------------------------------------*/
-/*Hírfolyam*/
-  #edited-content {
-    background-color: rgba(255, 153, 0, 0.15);
-    border-top: 3px solid orange;
-    border-bottom: none;
-    border-radius: 10px;
-    margin: 0 auto 3em auto;
-    padding: 1em;
-    text-align: center;
-    font-size: 1.1em;
-    position: relative;
-    bottom: 5em;
-    max-width: 60em;
-  }
 
+    /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Táblázat*/
+    table, th, td {
+      border: 1.7px solid black;
+      border-collapse: collapse;
+    }
+    .responsive {overflow-x: auto; position: relative; bottom: 5em;}
+    th, td {padding: 1em; text-align: center;}
+    th {background-color: green}
+    td {background-color: orange; color: black;}
+    .ingradiesnts {font-size: 0.75em;}
+
+    .ord-btn {
+      background-color: green;
+      color: orange;
+      padding: 0.5em 1em;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    .ord-btn:hover {background-color: purple; color: }
+    .c-num {width: 4em;}
+     #kepek {
+      width: 4em;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Képnagyító*/
+    .modal--content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 600px;
+      max-height: 500px;
+    }
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+    .X {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.5s;
+    }
+    .X:hover, .X:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Alláb*/
   #open_hours2 {text-align: right; position: relative; bottom: 6.7em;}
-  .moveup-hr {position: relative; }
+  .moving {position: relative; top: 0em}
   #map {margin: auto; display: block; width: 95vw;}
     #facebook-bottom {
     position: relative;
