@@ -70,7 +70,7 @@
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Felgró-bejelentkező  ablak*/
 
-  #uname, #password {
+  #email, #password {
     width: 100%;
     padding: 12px 20px;
     margin: 8px;
@@ -157,6 +157,19 @@
   @keyframes animatezoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
+  }
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Hírfolyam*/
+  #edited-content {
+    background-color: rgba(255, 153, 0, 0.15);
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+    border-radius: 10px;
+    margin: 0 auto 3em auto;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.1em;
+    max-width: 60em;
   }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/

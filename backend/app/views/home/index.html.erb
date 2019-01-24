@@ -98,9 +98,10 @@
 
       <!--Szerkeszthető tartalom-->
       <% if current_user %>
-        <%= form_tag(sessions_path, class: "modal-content animate") do |form| %>
-          <%= text_area_tag 'editor', 'editor', 'Anya, ide írd amit a hírfolyamban akarsz látni!' %>
-          <%= button_tag 'Szerkeszt'%>
+        <%= form_tag sessions_path do |form| %>
+          <%= text_area_tag 'editor', :nil, placeholder: 'Anya, ide írd amit a hírfolyamban akarsz látni!' %>
+          <br>
+          <%= button_tag 'Szerkeszt', class: "editor-btn"%>
         <% end %>
         <%= link_to "Kilépés", logout_path %>
       <% end %>
