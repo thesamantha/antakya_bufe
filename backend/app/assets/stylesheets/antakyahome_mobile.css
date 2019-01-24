@@ -19,7 +19,7 @@
   }
   pre {
     font-family: sans-serif;
-    font-size: 4vw;
+    font-size: 0.8em;
     text-align: center;
   }
 
@@ -41,6 +41,9 @@
      color: black;
   }
   li:hover a:hover {background-color: green;}
+  #facebook {display: none;}
+
+
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Bejelentkező és regisztrációs gomb*/
@@ -147,14 +150,29 @@
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s;
   }
-  @@keyframes animatezoom {
+  @keyframes animatezoom {
     from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
   }
-  @@keyframes animatezoom {
+  @keyframes animatezoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
   }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Alláb*/
+#map {margin: auto; display: block; width: 95vw;}
+#facebook-bottom {
+  position: relative;
+  left: 0.8em;
+  display: block;
+  margin: 1em auto;
+  padding: 0;
+  border: 0px;
+  border-radius: 50%;
+  width: 3em;
+}
+
+
+
 }
