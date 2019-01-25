@@ -204,7 +204,7 @@
     cursor: pointer;
   }
   .editor-btn:hover {opacity: 0.7}
-  #editor {
+  #content {
     position: relative;
     margin: auto;
     display: block;

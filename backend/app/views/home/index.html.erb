@@ -93,15 +93,28 @@
             <span class="psw"><a href="###">Elfelejtette jelszavát?</a></span>
           </div>
         <% end %>
-
       </div>
+
+      <% @posts.reverse_each do |post| %>
+        <div id="edited-content">
+          <p>
+          <%= post.content %> <br>
+          <% if current_user %>
+            <%= link_to 'Szerkeszt', edit_post_path(post) %>
+            <%= link_to 'Törlés', post, data: { confirm: 'Biztos?'}, method: 'delete' %>
+            <br>
+          <% end %>
+          <br>
+          </p>
+        </div>
+      <% end %>
 
       <!--Szerkeszthető tartalom-->
       <% if current_user %>
-        <%= form_tag sessions_path do |form| %>
-          <%= text_area_tag 'editor', :nil, placeholder: 'Anya, ide írd amit a hírfolyamban akarsz látni!' %>
+        <%= form_tag posts_path, method: 'post' do |form| %>
+          <%= text_area_tag :content, '', placeholder: 'Anya, ide írd amit a hírfolyamban akarsz látni!' %>
           <br>
-          <%= button_tag 'Szerkeszt', class: "editor-btn"%>
+          <%= button_tag 'Hozzáadás', class: "editor-btn"%>
         <% end %>
         <%= link_to "Kilépés", logout_path %>
       <% end %>
