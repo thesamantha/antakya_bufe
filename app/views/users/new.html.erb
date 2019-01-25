@@ -22,23 +22,37 @@
     <hr>
     <div class="border">
       <%= form_tag(users_path, class: "reg_form") do |form| %>
-          <%= label_tag 'name', 'Teljes név' %><br>
-          <%= text_field_tag 'name', nil, placeholder: 'Írja be a teljes nevét!', required: true %>
-
-          <%= label_tag 'email', 'Email' %><br>
-          <%= text_field_tag 'email', nil, placeholder: 'Írja be az email cimét!', required: true %><br>
-
-          <%= label_tag 'addr', 'Cím (nem kötelező)', class: 'right' %><br>
-          <%= text_field_tag 'addr', nil, placeholder: 'Azt a címed adja meg ahova az ételeket fogja rendelni!', class: 'right2' %><br>
-
-          <%= label_tag 'tele', 'Telefonszám (nem kötelező)', class: 'right' %><br>
-          <%= text_field_tag 'tele', nil, placeholder: 'Hogy az előrendelésnél fel tudjuk venni önnel a kapcsolatot kérjük adjon meg egy előrhetőséget!', class: 'right2'%><br>
-
-          <%= label_tag 'password', 'Jelszó', class: 'down1' %><br>
-          <%= password_field_tag 'password', nil, placeholder: "Válasszon egy erős jelszót!", class: 'down', required: true %><br>
-          <%= label_tag 'password', 'Jelszó ismétlése', class: 'down1' %><br>
-          <%= password_field_tag 'password_confirmation', nil, placeholder: "Írja be jelszavát még egyszer!", class: 'down', required: true %><br>
-
+        <table>
+          <tr>
+            <th>
+              <%= label_tag 'name', 'Teljes név' %><br>
+              <%= text_field_tag 'name', nil, placeholder: 'Írja be a teljes nevét!', required: true %>
+            </th>
+            <th>
+              <%= label_tag 'email', 'Email' %><br>
+              <%= text_field_tag 'email', nil, placeholder: 'Írja be az email cimét!', required: true %>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <%= label_tag 'addr', 'Cím (nem kötelező)', class: 'right' %><br>
+              <%= text_field_tag 'addr', nil, placeholder: 'Azt a címed adja meg ahova az ételeket fogja rendelni!', class: 'right2' %>
+            </th>
+            <th>
+              <%= label_tag 'tele', 'Telefonszám (nem kötelező)', class: 'right' %><br>
+              <%= text_field_tag 'tele', nil, placeholder: 'Hogy az előrendelésnél fel tudjuk venni önnel a kapcsolatot kérjük adjon meg egy előrhetőséget!', class: 'right2'%>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <%= label_tag 'password', 'Jelszó', class: 'down1' %><br>
+              <%= password_field_tag 'password', nil, placeholder: "Válasszon egy erős jelszót!", class: 'down', required: true %>
+            <th>
+              <%= label_tag 'password', 'Jelszó ismétlése', class: 'down1' %><br>
+              <%= password_field_tag 'password_confirmation', nil, placeholder: "Írja be jelszavát még egyszer!", class: 'down', required: true %>
+            </tr>
+          </tr>
+        </table>
           <%= submit_tag "Regisztráció", class: "reg" %><br>
       <% end %>
     </div>
