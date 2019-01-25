@@ -1,0 +1,9 @@
+<h1> Editing post </h1>
+
+<%= form_for(@post) do |form| %>
+  <%= text_area_tag :content, @post.content %>
+  <br>
+  <%= button_tag 'Szerkeszt', class: "editor-btn"%>
+<% end %>
+
+<%= link_to 'Vissza', root_path %>
