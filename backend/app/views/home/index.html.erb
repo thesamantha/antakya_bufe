@@ -63,8 +63,9 @@
       <div class="login-box">
         <p>Kérjük, hogy az egyéni kedvezményekhez és a gyorsabb rendeléshez jelentkezzen be. Ha nincs fiókja regisztráljon.</p>
         <button type="button" name="login" class="login" onclick="document.getElementById('id01').style.display = 'block'">Bejelentkezés</button>
-        <button type="button" name="registration-link" class="registration-link"><a href="#">Regisztráció</a></button>
+        <%= button_to "Regisztráció", new_user_url, name: "registration-link", class: "registration-link", method: 'get' %>
       </div>
+      <hr>
 
       <!--Felugró bejelentkező ablak-->
       <div class="modal" id="id01">
@@ -76,8 +77,8 @@
             <img src="img_avatar.png" alt="avatár-kép" class="avatar"><!--avatár-kép-->
           </div>
           <div class="container">
-            <%= label_tag 'email', 'Felhasználónév' %>
-            <%= text_field_tag 'email', nil, placeholder: 'Írja be a felhasználónevét!', required: true %>
+            <%= label_tag 'email', 'E-Mail' %>
+            <%= text_field_tag 'email', nil, placeholder: 'Írja be az e-mail cimét!', required: true %>
 
             <%= label_tag 'password', 'Jelszó' %>
             <%= password_field_tag 'password', nil, placeholder: "Írja be a jelszavát!", required: true %>
@@ -105,6 +106,7 @@
             <br>
           <% end %>
           <br>
+          ----------------------------------------------------------------------------------------------------------------------------------------------------------
           </p>
         </div>
       <% end %>

@@ -66,7 +66,7 @@ input:focus {background-color: lightblue; border-color: orange;}
 }
 
 
-button.reg {
+.reg {
   background-color: green;
   padding: 0.6em;
   color: orange;
@@ -78,11 +78,11 @@ button.reg {
   font-size: 3em;
   width: 94%
 }
-button.reg:hover {
+.reg:hover {
     background-color: darkgreen;
 }
 
-button.megse {
+a.megse {
   background-color: red;
   padding: 1em;
   color: orange;
@@ -92,4 +92,4 @@ button.megse {
   font-size: 1.3em;
   margin-left:2.3em;
 }
-button.megse:hover {background-color: orange; color:black;}
+a.megse:hover {background-color: orange; color:black;}

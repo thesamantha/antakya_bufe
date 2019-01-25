@@ -8,8 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_url, flash: { :success => "Üdvözöljünk, #{user.email}!" }
     else
-      flash[:alert] = "Email-od vagy jelszavad nem stimmel."
-      render "home/index"
+      redirect_to root_url, flash: { :error => "Emaile vagy jelszavad nem stimmel."}
     end
   end
 

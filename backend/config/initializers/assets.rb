@@ -13,4 +13,5 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( antakyahome_mobile.css )
 Rails.application.config.assets.precompile += %w( antakyahome_tablet.css )
 Rails.application.config.assets.precompile += %w( antakyahome_full_screen.css )
+Rails.application.config.assets.precompile += %w( regisztracio.css )
 Rails.application.config.assets.precompile += %w( bejelentkezo-ablak.js )
