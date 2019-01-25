@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= javascript_include_tag 'application' %>
 
     <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="hu"> <![endif]-->
@@ -102,7 +103,7 @@
           <%= post.content %> <br>
           <% if current_user %>
             <%= link_to 'Szerkeszt', edit_post_path(post) %>
-            <%= link_to 'Törlés', post, data: { confirm: 'Biztos?'}, method: 'delete' %>
+            <%= link_to 'Törlés', post_path(post), method: :delete %>
             <br>
           <% end %>
           <br>
