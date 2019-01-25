@@ -12,18 +12,12 @@
 <html class="no-js lt-ie9" lang="hu"> <![endif]-->
 <!--[if gt IE 8]><!-->
     <title>Antakya Török Büfé - Budaörs</title>
-    <%= stylesheet_link_tag "antakyahome_mobile" %>
-    <%= stylesheet_link_tag "antakyahome_tablet" %>
-    <%= stylesheet_link_tag "antakyahome_full_screen" %>
+    <link rel="stylesheet" href="antakyahome_mobile.css">
+    <link rel="stylesheet" href="antakyahome_tablet.css">
+    <link rel="stylesheet" href="antakyahome_full_screen.css">
   </head>
   <body>
     <header>
-      <!-- Give information to logged in user -->
-      <% flash.each do |key, value| %>
-        <div class="<%= flash_class(key) %>">
-              <%= value %>
-        </div>
-      <% end %>
       <!--Információk-->
       <h2>Antakya Török Büfé - Budaörs</h2>
       <pre>
@@ -52,6 +46,7 @@
         <li><a href="antakya_we.html">Rólunk</a></li>
         <li><a href="antakya_intresting.html">Érdekességek</a></li>
         <li><a href="antakya_akciok.html">Akciók</a></li>
+        <li><a href="antakya_galeria.html">Galéria</a></li>
         <li id="facebook"><a href="https://www.facebook.com/antakyadonerbudaors/" id="facebook"><img src="facebook.png" id="facebook" alt="facebook-icon"></a></li>
       </ul>
 
@@ -63,61 +58,45 @@
       <div class="login-box">
         <p>Kérjük, hogy az egyéni kedvezményekhez és a gyorsabb rendeléshez jelentkezzen be. Ha nincs fiókja regisztráljon.</p>
         <button type="button" name="login" class="login" onclick="document.getElementById('id01').style.display = 'block'">Bejelentkezés</button>
-        <button type="button" name="registration-link" class="registration-link"><a href="#">Regisztráció</a></button>
+        <button type="button" name="registration-link" class="registration-link" onclick="window.location.href='regisztracio.html'">Regisztráció</button>
       </div>
+      <hr>
 
       <!--Felugró bejelentkező ablak-->
       <div class="modal" id="id01">
-        <p id="alert"><%= alert %></p>
-
-        <%= form_tag(sessions_path, class: "modal-content animate") do |form| %>
+        <form class="modal-content animate" action="index.html"> <!--felugró ablak lejátszása és a megfelelő helyre küldő modul-->
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span> <!--X-gomb-->
             <img src="img_avatar.png" alt="avatár-kép" class="avatar"><!--avatár-kép-->
           </div>
+
           <div class="container">
-            <%= label_tag 'email', 'Felhasználónév' %>
-            <%= text_field_tag 'email', nil, placeholder: 'Írja be a felhasználónevét!', required: true %>
+            <label for="uname"><b>Felhasználónév</b></label>
+            <input type="text" name="uname" id="uname" placeholder="Írja be a felhasználónevét!" required>
 
-            <%= label_tag 'password', 'Jelszó' %>
-            <%= password_field_tag 'password', nil, placeholder: "Írja be a jelszavát!", required: true %>
+            <label for="psw"><b>Jelszó</b></label>
+            <input type="password" name="psw" id="password" placeholder="Írja be a jelszavát!" required>
 
-            <%= submit_tag "Bejelentkezés", class: "bej" %>
-
-            <%= label_tag 'remember', 'Emlékezz rám' %>
-            <%= check_box_tag "remember", "yes" %>
+            <button type="submit" class="bej">Bejelentkezés</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember">Emlékezz rám</label>
           </div>
 
           <div class="container">
             <button type="button" onclick="document.getElementById('id01').style.display = 'none'" class="cancelbtn">Mégse</button>
             <span class="psw"><a href="###">Elfelejtette jelszavát?</a></span>
           </div>
-        <% end %>
+        </form>
       </div>
 
-      <% @posts.reverse_each do |post| %>
-        <div id="edited-content">
-          <p>
-          <%= post.content %> <br>
-          <% if current_user %>
-            <%= link_to 'Szerkeszt', edit_post_path(post) %>
-            <%= link_to 'Törlés', post, data: { confirm: 'Biztos?'}, method: 'delete' %>
-            <br>
-          <% end %>
-          <br>
-          </p>
-        </div>
-      <% end %>
-
       <!--Szerkeszthető tartalom-->
-      <% if current_user %>
-        <%= form_tag posts_path, method: 'post' do |form| %>
-          <%= text_area_tag :content, '', placeholder: 'Anya, ide írd amit a hírfolyamban akarsz látni!' %>
-          <br>
-          <%= button_tag 'Hozzáadás', class: "editor-btn"%>
-        <% end %>
-        <%= link_to "Kilépés", logout_path %>
-      <% end %>
+      <div id="edited-content">
+
+      </div>
+
+      <textarea name="editor" id="editor" placeholder="Anya, ide írd amit a hírfolyamban akarsz látni!"></textarea><br>
+      <button type="button" class="editor-btn" onclick="textEdit()">Szerkeszt</button>
+
     </main>
     <hr class="moving">
 
@@ -152,9 +131,7 @@
         </div>
     </footer>
 
-
-
-<%= javascript_include_tag "bejelentkezo-ablak" %>
+<script src="bejelentkezo-ablak.js"></script>
 
   </body>
 </html>

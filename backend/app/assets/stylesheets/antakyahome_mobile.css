@@ -19,7 +19,7 @@
   }
   pre {
     font-family: sans-serif;
-    font-size: 4vw;
+    font-size: 0.8em;
     text-align: center;
   }
 
@@ -41,6 +41,9 @@
      color: black;
   }
   li:hover a:hover {background-color: green;}
+  #facebook {display: none;}
+
+
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Bejelentkező és regisztrációs gomb*/
@@ -67,7 +70,7 @@
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Felgró-bejelentkező  ablak*/
 
-  #uname, #password {
+  #email, #password {
     width: 100%;
     padding: 12px 20px;
     margin: 8px;
@@ -147,14 +150,42 @@
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s;
   }
-  @@keyframes animatezoom {
+  @keyframes animatezoom {
     from {-webkit-transform: scale(0)}
     to {-webkit-transform: scale(1)}
   }
-  @@keyframes animatezoom {
+  @keyframes animatezoom {
     from {transform: scale(0)}
     to {transform: scale(1)}
   }
+/*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Hírfolyam*/
+  #edited-content {
+    background-color: rgba(255, 153, 0, 0.15);
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+    border-radius: 10px;
+    margin: 0 auto 3em auto;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.1em;
+    max-width: 60em;
+  }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Alláb*/
+#map {margin: auto; display: block; width: 95vw;}
+#facebook-bottom {
+  position: relative;
+  left: 0.8em;
+  display: block;
+  margin: 1em auto;
+  padding: 0;
+  border: 0px;
+  border-radius: 50%;
+  width: 3em;
+}
+
+
+
 }
