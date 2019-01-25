@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="hu"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="hu"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="hu"> <![endif]-->
+<!--[if gt IE 8]><!-->
+    <title>Registráció - Antakya Török Büfé</title>
+    <%= stylesheet_link_tag "regisztracio" %>
+  </head>
+  <body>
+    <header>
+      <h2>Regisztráció - Antakya Török Büfé</h2>
+      <p>Egyéni kevezményekért és az egyszerűbb előrendelés felvételhez illetve kiszállításhoz kérjük töltse ki az alábbi mezőket.</p>
+    </header>
+    <hr>
+    <div class="border">
+      <%= form_tag(users_path, class: "reg_form") do |form| %>
+          <%= label_tag 'name', 'Teljes név' %><br>
+          <%= text_field_tag 'name', nil, placeholder: 'Írja be a teljes nevét!', required: true %>
+
+          <%= label_tag 'email', 'Email' %><br>
+          <%= text_field_tag 'email', nil, placeholder: 'Írja be az email cimét!', required: true %><br>
+
+          <%= label_tag 'addr', 'Cím (nem kötelező)', class: 'right' %><br>
+          <%= text_field_tag 'addr', nil, placeholder: 'Azt a címed adja meg ahova az ételeket fogja rendelni!', class: 'right2' %><br>
+
+          <%= label_tag 'tele', 'Telefonszám (nem kötelező)', class: 'right' %><br>
+          <%= text_field_tag 'tele', nil, placeholder: 'Hogy az előrendelésnél fel tudjuk venni önnel a kapcsolatot kérjük adjon meg egy előrhetőséget!', class: 'right2'%><br>
+
+          <%= label_tag 'password', 'Jelszó', class: 'down1' %><br>
+          <%= password_field_tag 'password', nil, placeholder: "Válasszon egy erős jelszót!", class: 'down', required: true %><br>
+          <%= label_tag 'password', 'Jelszó ismétlése', class: 'down1' %><br>
+          <%= password_field_tag 'password_confirmation', nil, placeholder: "Írja be jelszavát még egyszer!", class: 'down', required: true %><br>
+
+          <%= submit_tag "Regisztráció", class: "reg" %><br>
+      <% end %>
+    </div>
+    <%= link_to "Mégse", root_path, class: "megse" %><br>
+  </body>
+
+</html>
