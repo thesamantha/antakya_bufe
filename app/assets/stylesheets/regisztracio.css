@@ -1,0 +1,95 @@
+/*Háttér és betűszín*/
+body {
+  background-color: #b30000;
+  background-image: linear-gradient(#b30000, #ff0000);
+  color:orange;
+}
+
+h2 {
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 1px 1px black;
+}
+
+p {
+  font-size: 1.45em;
+  margin: 1em;
+}
+
+hr {color: orange; margin: 2em;}
+
+.border {
+  border: 5px solid orange;
+  border-radius: 15px;
+  margin: 1em;
+  padding: 1em;
+  height: 27em;
+}
+
+label {
+  font-weight: bold;
+  margin: 0px 1em;
+  font-size: 1.5em;
+}
+
+input {
+  margin: 0.5em;
+  width: 26em;
+  height: 1.5em;
+  font-size: 1.3em;
+  padding: 0.4em;
+  background-color: orange;
+  border:2px solid black;
+  border-radius: 5px;
+}
+input:focus {background-color: lightblue; border-color: orange;}
+
+.right {
+  position: relative;
+  left: 25em;
+  bottom: 8.3em;
+}
+.right2 {
+  position: relative;
+  left: 29em;
+  bottom: 9.8em;
+}
+.down {
+  position: relative;
+  left: 14em;
+  bottom: 8em;
+}
+.down1 {
+  position: relative;
+  left: 12em;
+  bottom: 7em;
+}
+
+
+button.reg {
+  background-color: green;
+  padding: 0.6em;
+  color: orange;
+  text-shadow: 2px 1px 1px black;
+  font-weight: bold;
+  border: 3px solid orange;
+  border-radius: 5px;
+  margin:1em;
+  font-size: 3em;
+  width: 94%
+}
+button.reg:hover {
+    background-color: darkgreen;
+}
+
+button.megse {
+  background-color: red;
+  padding: 1em;
+  color: orange;
+  text-shadow: 2px 1px 1px black;
+  border:2px solid orange;
+  border-radius: 5px;
+  font-size: 1.3em;
+  margin-left:2.3em;
+}
+button.megse:hover {background-color: orange; color:black;}
