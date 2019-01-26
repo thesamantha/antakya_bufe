@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1150px) {
 
   /*Háttér és betűszín*/
   body {
@@ -58,6 +58,18 @@
     float: right;
   }
   #facebook:hover {background-color: inherit;}
+  #tripadvisor {
+    position: relative;
+    left: -6px;
+    bottom: 0;
+    margin: 0.08em 0.1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 2em;
+    float: right;
+  }
+  #tripadvisor:hover {background: none;}
 
   nav {position: relative; bottom: 10em}
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -257,7 +269,17 @@
     width: 3.5em;
     float: right;
   }
-
+  #tripadvisor-bottom {
+    position: relative;
+    top: -3em;
+    left: 0;
+    margin: 0 1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3.5em;
+    float: right;
+  }
 
 
 

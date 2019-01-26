@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1150px) {
 
   /*Háttér és betűszín*/
   body {
@@ -58,6 +58,18 @@
     float: right;
   }
   #facebook:hover {background-color: inherit;}
+  #tripadvisor {
+    position: relative;
+    left: -6px;
+    bottom: 0;
+    margin: 0.08em 0.1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 2em;
+    float: right;
+  }
+  #tripadvisor:hover {background: none;}
 
   nav {position: relative; bottom: 10em}
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -195,7 +207,7 @@
     position: fixed;
     z-index: 1;
     padding-top: 100px;
-    height: 100%;
+    height: 85%;
     left: 0;
     top: 0;
     width: 100%;
@@ -254,6 +266,7 @@
     padding: 2px 16px;
     color: white;
   }
+  .column2 {float: left; margin: 5px; align: center}
   img.demo {opacity: 0.6; float: left; width: 200px; }
   .active,
   .demo:hover {opacity: 1;}
@@ -276,7 +289,17 @@
     width: 3.5em;
     float: right;
   }
-
+  #tripadvisor-bottom {
+    position: relative;
+    top: -3em;
+    left: 0;
+    margin: 0 1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3.5em;
+    float: right;
+  }
 
 
 
