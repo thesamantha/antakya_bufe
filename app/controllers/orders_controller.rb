@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   def new
     @order = Order.new
+    render :layout => false
 
     # should receive key called food in params hash
     # for food in foods do

@@ -48,8 +48,8 @@
       <!--Menü-->
 
       <ul>
-        <li><a href="antakyahome.html">Kezdőlap</a></li>
-        <li><a href="antakya_order.html">Étlap/Rendelés(később)</a></li>
+        <li><%= link_to "Kezdőlap", root_path %></li>
+        <li><%= link_to "Étlap/Rendelés(később)", orders_new_path %></li>
         <li><a href="antakya_we.html">Rólunk</a></li>
         <li><a href="antakya_intresting.html">Érdekességek</a></li>
         <li><a href="antakya_akciok.html">Akciók</a></li>
@@ -75,7 +75,7 @@
         <%= form_tag(sessions_path, class: "modal-content animate") do |form| %>
           <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display = 'none'" class="close" title="Close Modal">&times;</span> <!--X-gomb-->
-            <img src="img_avatar.png" alt="avatár-kép" class="avatar"><!--avatár-kép-->
+            <img src="img_avatar.png" alt="avatár-kép" class="avatar"> <!--avatár-kép-->
           </div>
           <div class="container">
             <%= label_tag 'email', 'E-Mail' %>
@@ -97,21 +97,20 @@
         <% end %>
       </div>
 
-      <% @posts.reverse_each do |post| %>
-        <div id="edited-content">
-          <p>
-          <%= post.content %> <br>
-          <% if current_user %>
-            <%= link_to 'Szerkeszt', edit_post_path(post) %>
-            <%= link_to 'Törlés', post_path(post), method: :delete %>
+      <div id="edited-content">
+        <% @posts.reverse_each do |post| %>
+            <p>
+            <%= post.content %> <br>
+            <% if current_user %>
+              <%= link_to 'Szerkeszt', edit_post_path(post) %>
+              <%= link_to 'Törlés', post_path(post), method: :delete %>
+              <br>
+            <% end %>
             <br>
-          <% end %>
-          <br>
-          ----------------------------------------------------------------------------------------------------------------------------------------------------------
-          </p>
-        </div>
-      <% end %>
-
+            ----------------------------------------------------------------------------------------------------------------------------------------------------------
+            </p>
+        <% end %>
+      </div>
       <!--Szerkeszthető tartalom-->
       <% if current_user %>
         <%= form_tag posts_path, method: 'post' do |form| %>
