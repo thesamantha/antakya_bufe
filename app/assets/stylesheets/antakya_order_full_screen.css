@@ -3,6 +3,7 @@
   /*Háttér és betűszín*/
   body {
     background-color: #b30000;
+    background-image: linear-gradient(#b30000, #ff0000);
     color:orange;
   }
   hr {color: orange; position: relative; bottom: 10em;}
