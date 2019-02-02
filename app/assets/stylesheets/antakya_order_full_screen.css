@@ -199,7 +199,7 @@
     border: 1px solid black;
     border-radius: 5px;
   }
-  .ord-btn:hover {background-color: purple; color: }
+  .ord-btn:hover {background-color: purple;}
   .c-num {width: 4em;}
    #kepek {
     width: 8em;
@@ -256,8 +256,3 @@
     width: 3.5em;
     float: right;
   }
-
-
-
-
-}
