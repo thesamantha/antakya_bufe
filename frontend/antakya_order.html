@@ -101,15 +101,15 @@ Vasárnap   Zárva</pre>
             <th>Db</th>
             <th>Rendelés</th>
           </tr>
-          <tr>
+          <tr id="1">
             <td><img src="kepek/tal.jpg" id="kepek" onclick="myFunction(this)" alt="Döner Tál"></td>
             <td>Döner Tál</td>
             <td class="ingradiesnts">csirkehús, káposzta, répa, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, sültkrumpli, pita</td>
             <td>1400 Ft</td>
-            <td><input type="number" class="c-num"></td>
-            <td><button type="button" class="ord-btn">Rendelés</button></td>
+            <td><input type="number" id="takenum" class="c-num"></td>
+            <td><button type="button" class="ord-btn" onclick="order()">Rendelés</button></td>
           </tr>
-          <tr>
+          <tr id="2">
             <td><img src="kepek/barany.jpg" id="kepek" onclick="myFunction(this) "alt="Bárány Döner"></td>
             <td>Bárány Döner</td>
             <td class="ingradiesnts">darált bárányhús, répa, káposzta, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, lavas</td>
@@ -127,6 +127,26 @@ Vasárnap   Zárva</pre>
           <div id="caption"></div>
       </div>
 
+
+
+
+      <!--Kosár-->
+      <div class="rendelt" style="display: none">
+        <h1><ins>Eddig a kosramban:</ins></h1><br>
+        <div class="jelzes"></div>
+      </div>
+
+
+
+      <div id="try">
+
+      </div>
+
+
+
+
+
+
     </main>
     <hr class="moving">
 
@@ -141,6 +161,7 @@ Vasárnap   Zárva</pre>
         <a href="https://www.facebook.com/antakyadonerbudaors/" id="facebook-bottom"><img src="facebook.png" id="facebook-bottom" alt="facebook-icon"></a>
         <a href="https://www.tripadvisor.com/Restaurant_Review-g274886-d11435580-Reviews-Antakya_Torok_Food_Bar-Budaors_Pest_County_Central_Hungary.html" id="tripadvisor-bottom"><img src="trip.png" id="tripadvisor-bottom" alt="tripadvisor"></a>
       </div>
+
 
       <!--Információk a lap alján is legyenek-->
       <div class="footer-infos">
@@ -164,6 +185,7 @@ Vasárnap   Zárva
 
 <script src="bejelentkezo-ablak.js"></script>
 <script src="imgViewer.js"></script>
+<script src="orderCheck.js"></script>
 
   </body>
 </html>
