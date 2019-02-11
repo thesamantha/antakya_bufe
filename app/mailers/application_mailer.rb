@@ -1,4 +1,9 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'samanthatitewebber@gmail.com'
   layout 'mailer'
+
+  def registration_email(user)
+    @user = user
+    mail(to: @user.email, subject: "Successful Registration with Antakya Török Büfé")
+  end
 end
