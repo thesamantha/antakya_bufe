@@ -8,6 +8,8 @@
   }
   hr {color: orange; position: relative; bottom: 10em;}
   hr.moving {position: relative; top: 5em;}
+  ::-moz-selection {background-color: black; color: darkgreen}
+  ::selection {background-color: black; color: darkgreen}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
@@ -45,7 +47,7 @@
     border-bottom: 0;
     width: auto;
   }
-  li:hover a:hover {background-color: green;}
+  li:hover a:hover {background-color: green; transition: 0.8s}
   #facebook {
     position: relative;
     left: 0;
@@ -198,6 +200,12 @@
   height: 400px;
   border-radius: 10px;
   border: 5px dotted orange;
+  -webkit-animation-name: scrl;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-delay: 4s;
+  animation-name: scrl;
+  animation-duration: 1.5s;
+  animation-delay: 4s;
 }
 .kontener {
   max-width: 1000px;
@@ -224,17 +232,25 @@
 .slip {
   position: relative;
   -webkit-animation-name: slide;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 1.8s;
   animation-name: slide;
-  animation-duration: 1.5s;
+  animation-duration: 1.8s;
 }
 @-webkit-keyframes slide {
-    from {right: 2000px}
-    to {right: 0px;}
+    from {transform: rotateX(90deg)}
+    to {transform: rotateX(0deg)}
 }
 @keyframes slide {
-    from {right: 2000px}
-    to {right: 0px}
+    from {transform: rotateX(90deg)}
+    to {transform: rotateX(0deg)}
+}
+@-webkit-keyframes scrl {
+  from {transform: rotateX(0);}
+  to {transform: rotateX(90deg);}
+}
+@keyframes scrl {
+  from {transform: rotateX(0);}
+  to {transform: rotateX(90deg);}
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -249,7 +265,7 @@
     font-size: 1.1em;
     position: relative;
     bottom: 5em;
-    max-width: 60em;
+    max-width:60em;
   }
 
 /*-------------------------------------------------------------------------------*/
