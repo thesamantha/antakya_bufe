@@ -101,21 +101,21 @@ Vasárnap   Zárva</pre>
             <th>Db</th>
             <th>Rendelés</th>
           </tr>
-          <tr id="1">
+          <tr>
             <td><img src="kepek/tal.jpg" id="kepek" onclick="myFunction(this)" alt="Döner Tál"></td>
             <td>Döner Tál</td>
             <td class="ingradiesnts">csirkehús, káposzta, répa, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, sültkrumpli, pita</td>
-            <td>1400 Ft</td>
+            <td class="price"><p>1400</p></td>
             <td><input type="number" id="takenum" class="c-num" min="0"></td>
-            <td><button type="button" class="ord-btn" onclick="order()">Rendelés</button></td>
+            <td><button type="button" class="ord-btn">Kosárba</button></td>
           </tr>
-          <tr id="2">
+          <tr>
             <td><img src="kepek/barany.jpg" id="kepek" onclick="myFunction(this) "alt="Bárány Döner"></td>
             <td>Bárány Döner</td>
             <td class="ingradiesnts">darált bárányhús, répa, káposzta, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, lavas</td>
-            <td>890 Ft</td>
+            <td class="price"><p>890</p></td>
             <td><input type="number" class="c-num" min="0"></td>
-            <td><button type="button" class="ord-btn">Rendelés</button></td>
+            <td><button type="button" class="ord-btn">Kosárba</button></td>
           </tr>
       </table>
       </div>
@@ -133,14 +133,12 @@ Vasárnap   Zárva</pre>
       <!--Kosár-->
       <div class="rendelt" style="display: none">
         <h1><ins>Eddig a kosramban:</ins></h1><br>
-        <div class="jelzes"></div>
+        <div class="visszaJelzes"></div><br>
+        <p>A következő oldalon be tudod állítani az egyéni rendelésedet (pl.:hagyma vagy csípős nélkül..stb)</p><br><br>
+        <button name="finalOrder" class="ord-btn">Tovább a rendeléshez</button>
       </div>
 
 
-
-      <div id="try">
-
-      </div>
 
 
 

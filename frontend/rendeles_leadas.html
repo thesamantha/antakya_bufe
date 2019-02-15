@@ -1,0 +1,44 @@
+  <!DOCTYPE html>
+<html lang="hu" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rendelés - Anatakya Török Büfé</title>
+    <style media="screen">
+      .rendelo {border: 1px solid black}
+      .etel {border: 1px solid black}
+    </style>
+  </head>
+  <body>
+    <h2>Antakya Török Büfé - Budaörs</h2>
+    <hr>
+    <form class="rendeles" action="#">
+      <div class="rendelo">
+        <label>Név</label><br>
+        <input type="text" name="rendelo-neve" value="valaki"><br>
+        <label>Rendelés címe</label><br>
+        <input type="text" name="rendelo-cime" value="2040 Budaörs valamilyen utca x"><br>
+        <label>Telefonszám</label><br>
+        <input type="number" name="phone"><br>
+    </div>
+
+
+
+      <h3>Példa</h3>
+      <div class="etel">
+      <h1>Döner</h1>
+      <input type="checkbox" name="kaposzta" value="káposzta">káposzta<br>
+      <input type="checkbox" name="hagyma" value="hagyma">hagyma<br>
+      <input type="checkbox" name="salata" value="saláta">saláta<br>
+      <input type="checkbox" name="paradicsom" value="paradicsom">paradicsom<br>
+      <input type="checkbox" name="csalamade" value="csalamade">csalamádé<br>
+      <input type="checkbox" name="yoghurt" value="yoghurt">youghurtos szósz<br>
+      <input type="checkbox" name="csipos" value="csipos">csípős szósz<br><br><br><br>
+      <label>megjegyzés</label><br>
+      <textarea name="megjegyzes" rows="12" cols="80"></textarea>
+    </div>
+
+
+      <input type="submit" name="rendeles" value="Rendelés">
+    </form>
+  </body>
+</html>
