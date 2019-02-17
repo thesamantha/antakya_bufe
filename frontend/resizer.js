@@ -6,11 +6,11 @@ function clickEvent() {
   box.style.top = "1em"
   box.style.backgroundColor = "rgb(255, 153, 0)"
   box.style.color = "black"
-  box.style.width = "100%"
-  box.style.left = "10vw"
+  box.style.width = "100em"
   box.style.fontFamily = "serif"
   box.style.transitionTimingFunction = "linear"
   box.style.cursor = "pointer"
+  box.style.margin = "auto"
 }
 window.onclick = function(event) {
   if (event.target == box) {

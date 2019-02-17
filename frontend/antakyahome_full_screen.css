@@ -208,7 +208,8 @@
   animation-delay: 4s;
 }
 .kontener {
-  max-width: 1000px;
+  max-width: 85em;
+  max-height: 60em;
   position:relative;
   bottom: 8em;
   margin: auto;
