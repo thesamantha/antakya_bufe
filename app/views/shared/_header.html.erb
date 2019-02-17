@@ -16,11 +16,11 @@
   <%= stylesheet_link_tag "antakyahome_full_screen" %>
 </head>
   <header>
-    <!-- Give information to logged in user -->
-    <% flash.each do |key, value| %>
-      <div class="<%= flash_class(key) %>">
-            <%= value %>
-      </div>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
     <% end %>
     <!--Információk-->
     <h2>Antakya Török Büfé - Budaörs</h2>

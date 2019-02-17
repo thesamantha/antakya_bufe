@@ -5,8 +5,8 @@ class Food < ApplicationRecord
 
   PRICES = [890, 1000, 1400, 790].freeze
 
-  INGREDIENTS = [ "darált bárányhús, répa, káposzta, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, lavas",
-                  "falafel",
+  INGREDIENTS = [ "darált bárányhús, joghurtos szósz",
+                  "falafel, joghurtos szósz",
                   "csirkehús, káposzta, répa, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, sültkrumpli, pita",
                   "paradicsom, salata, sajt, oliva"].freeze
 end

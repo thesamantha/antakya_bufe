@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Rendelésszám <%= @order.id %></h1>
+    <p><b>Ügyfél neve:</b> <%= @order.customer_name%></p>
+    <p><b>Ügyfél címe:</b> <%= @order.address%></p>
+    <p><b>Ügyfél telefonszáma:</b> <%= @order.tele%></p>
+    <div>
+      <table>
+          <tr>
+            <th>Név</th>
+            <th>Összetevők</th>
+            <th>Ár</th>
+            <th>Db</th>
+          </tr>
+            <% @order.foods.each do |food| %>
+              <tr>
+                <td><%= food.name %></td>
+                <td class="ingradiesnts"><%= food.ingredients %></td>
+                <td><%= number_with_precision(food.price, :precision => 2) %></td>
+                <td><%= food.quantity %></td>
+              </tr>
+            <% end %>
+      </table>
+    </div>
+    <p>Végösszeg: <%= @order.total %> </p>
+  </body>
+</html>

@@ -5,10 +5,6 @@ class OrdersController < ApplicationController
     Food::NAMES.each_with_index do |name, index|
       @order.foods.build(name: name, price: Food::PRICES[index], ingredients: Food::INGREDIENTS[index])
     end
-    # should receive key called food in params hash
-    # for food in foods do
-    #     @foods.push(food)
-    # end
   end
 
 
@@ -26,6 +22,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        AppMailer.order_email(User.find(email: "samanthatitewebber@gmail.com"), @order).deliver_now
         format.html { redirect_to root_path, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else

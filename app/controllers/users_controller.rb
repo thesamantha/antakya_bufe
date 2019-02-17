@@ -28,9 +28,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-
         # Send email to notify user of successful registration
-        ApplicationMailer.registration_email(@user).deliver
+        AppMailer.registration_email(@user).deliver_now
 
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
