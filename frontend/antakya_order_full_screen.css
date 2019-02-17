@@ -213,6 +213,13 @@
     border-radius: 5px;
   }
   .ord-btn:hover {background-color: purple; color: }
+  .order-btn {
+    background-color: green;
+    color: orange;
+    padding: 0.5em 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
   .c-num {width: 4em;}
    #kepek {
     width: 4em;

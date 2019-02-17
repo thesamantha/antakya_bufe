@@ -1,44 +1,61 @@
-  <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="hu" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Rendelés - Anatakya Török Büfé</title>
-    <style media="screen">
-      .rendelo {border: 1px solid black}
-      .etel {border: 1px solid black}
-    </style>
+    <link rel="stylesheet" href="rendeles_leadas.css">
   </head>
   <body>
     <h2>Antakya Török Büfé - Budaörs</h2>
+    <h2>Rendelés</h2>
     <hr>
     <form class="rendeles" action="#">
+      <h3>Rendelő adatai</h3>
       <div class="rendelo">
         <label>Név</label><br>
-        <input type="text" name="rendelo-neve" value="valaki"><br>
+        <input type="text" name="rendelo-neve" value="valaki" class="ellenorzes" required><br>
         <label>Rendelés címe</label><br>
-        <input type="text" name="rendelo-cime" value="2040 Budaörs valamilyen utca x"><br>
+        <input type="text" name="rendelo-cime" value="2040 Budaörs valamilyen utca x" class="ellenorzes" required><br>
         <label>Telefonszám</label><br>
-        <input type="number" name="phone"><br>
+        <input type="text" name="phone" class="ellenorzes" required><br>
     </div>
 
 
 
-      <h3>Példa</h3>
+      <h3>Rendelés</h3>
       <div class="etel">
-      <h1>Döner</h1>
-      <input type="checkbox" name="kaposzta" value="káposzta">káposzta<br>
-      <input type="checkbox" name="hagyma" value="hagyma">hagyma<br>
-      <input type="checkbox" name="salata" value="saláta">saláta<br>
-      <input type="checkbox" name="paradicsom" value="paradicsom">paradicsom<br>
-      <input type="checkbox" name="csalamade" value="csalamade">csalamádé<br>
-      <input type="checkbox" name="yoghurt" value="yoghurt">youghurtos szósz<br>
-      <input type="checkbox" name="csipos" value="csipos">csípős szósz<br><br><br><br>
+      <h3>Döner</h3>
+      <input type="checkbox" name="minden" checked id="minden">Azonos ételekbe ugyanazokat kérem!
+      <p>Ha valamit nem szeretnél kérni a döneredbe, csak vedd ki a pipát belőle!</p><br><br>
+      <input type="checkbox" name="kaposzta" value="káposzta" checked>káposzta<br>
+      <input type="checkbox" name="hagyma" value="hagyma" checked>hagyma<br>
+      <input type="checkbox" name="salata" value="saláta" checked>saláta<br>
+      <input type="checkbox" name="paradicsom" value="paradicsom" checked>paradicsom<br>
+      <input type="checkbox" name="csalamade" value="csalamade" checked>csalamádé<br>
+      <input type="checkbox" name="yoghurt" value="yoghurt" checked>youghurtos szósz<br>
+      <input type="checkbox" name="csipos" value="csipos" checked>csípős szósz<br><br><br><br>
       <label>megjegyzés</label><br>
-      <textarea name="megjegyzes" rows="12" cols="80"></textarea>
+      <textarea name="megjegyzes" rows="12" cols="80" placeholder="Pl.: Kevés csípőst kérek bele, több yoghurtal..."></textarea>
     </div>
+    <br><br><br><br><br>
+
+    <div class="etel">
+    <h3>Döner</h3>
+    <input type="checkbox" name="minden" checked id="minden">Azonos ételekbe ugyanazokat kérem!
+    <p>Ha valamit nem szeretnél kérni a döneredbe, csak vedd ki a pipát belőle!</p><br><br>
+    <input type="checkbox" name="kaposzta" value="káposzta" checked>káposzta<br>
+    <input type="checkbox" name="hagyma" value="hagyma" checked>hagyma<br>
+    <input type="checkbox" name="salata" value="saláta" checked>saláta<br>
+    <input type="checkbox" name="paradicsom" value="paradicsom" checked>paradicsom<br>
+    <input type="checkbox" name="csalamade" value="csalamade" checked>csalamádé<br>
+    <input type="checkbox" name="yoghurt" value="yoghurt" checked>youghurtos szósz<br>
+    <input type="checkbox" name="csipos" value="csipos" checked>csípős szósz<br><br><br><br>
+    <label>megjegyzés</label><br>
+    <textarea name="megjegyzes" rows="12" cols="80" placeholder="Pl.: Kevés csípőst kérek bele, több yoghurtal..."></textarea>
+  </div>
 
 
-      <input type="submit" name="rendeles" value="Rendelés">
+      <input type="submit" name="rendeles" id="button" value="Rendelés">
     </form>
   </body>
 </html>
