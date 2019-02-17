@@ -48,6 +48,7 @@ Vasárnap   Zárva</pre>
         <li><a href="antakya_akciok.html">Akciók</a></li>
         <li><a href="antakya_galeria.html">Galéria</a></li>
         <li id="facebook"><a href="https://www.facebook.com/antakyadonerbudaors/" id="facebook"><img src="facebook.png" id="facebook" alt="facebook-icon"></a></li>
+        <li id="tripadvisor"><a href="https://www.tripadvisor.com/Restaurant_Review-g274886-d11435580-Reviews-Antakya_Torok_Food_Bar-Budaors_Pest_County_Central_Hungary.html" id="tripadvisor"><img src="trip.png" id="tripadvisor" alt="tripadvisor"></a></li>
       </ul>
 
     </nav>
@@ -101,20 +102,20 @@ Vasárnap   Zárva</pre>
             <th>Rendelés</th>
           </tr>
           <tr>
-            <td><img src="kepek/tal.jpg" id="kepek" onclick="myFunction(this)" alt="Döner Tál"></td>
+            <td><img src="kepek/doner_tal.JPG" id="kepek" onclick="myFunction(this)" alt="Döner Tál"></td>
             <td>Döner Tál</td>
             <td class="ingradiesnts">csirkehús, káposzta, répa, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, sültkrumpli, pita</td>
-            <td>1400 Ft</td>
-            <td><input type="number" class="c-num"></td>
-            <td><button type="button" class="ord-btn">Rendelés</button></td>
+            <td class="price"><p>1400</p></td>
+            <td><input type="number" id="takenum" class="c-num" min="0"></td>
+            <td><button type="button" class="ord-btn">Kosárba</button></td>
           </tr>
           <tr>
-            <td><img src="kepek/barany.jpg" id="kepek" onclick="myFunction(this) "alt="Bárány Döner"></td>
+            <td><img src="kepek/barany_doner2.jpg" id="kepek" onclick="myFunction(this) "alt="Bárány Döner"></td>
             <td>Bárány Döner</td>
             <td class="ingradiesnts">darált bárányhús, répa, káposzta, hagyma, saláta, paradicsom vagy csalamádé, joghurtos szósz, csípős szósz, lavas</td>
-            <td>890 Ft</td>
-            <td><input type="number" class="c-num"></td>
-            <td><button type="button" class="ord-btn">Rendelés</button></td>
+            <td class="price"><p>890</p></td>
+            <td><input type="number" class="c-num" min="0"></td>
+            <td><button type="button" class="ord-btn">Kosárba</button></td>
           </tr>
       </table>
       </div>
@@ -126,6 +127,13 @@ Vasárnap   Zárva</pre>
           <div id="caption"></div>
       </div>
 
+      <!--Kosár-->
+      <div class="rendelt" style="display: none">
+        <h1><ins>Eddig a kosramban:</ins></h1><br>
+        <div class="visszaJelzes"></div><br>
+        <p>A következő oldalon be tudod állítani az egyéni rendelésedet (pl.:hagyma vagy csípős nélkül..stb)</p><br><br>
+        <button class="order-btn" onclick="window.location.href='rendeles_leadas.html'">Tovább a rendeléshez</button>
+      </div>
     </main>
     <hr class="moving">
 
@@ -138,7 +146,9 @@ Vasárnap   Zárva</pre>
 
       <div class="social-media">
         <a href="https://www.facebook.com/antakyadonerbudaors/" id="facebook-bottom"><img src="facebook.png" id="facebook-bottom" alt="facebook-icon"></a>
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g274886-d11435580-Reviews-Antakya_Torok_Food_Bar-Budaors_Pest_County_Central_Hungary.html" id="tripadvisor-bottom"><img src="trip.png" id="tripadvisor-bottom" alt="tripadvisor"></a>
       </div>
+
 
       <!--Információk a lap alján is legyenek-->
       <div class="footer-infos">
@@ -162,6 +172,7 @@ Vasárnap   Zárva
 
 <script src="bejelentkezo-ablak.js"></script>
 <script src="imgViewer.js"></script>
+<script src="orderCheck.js"></script>
 
   </body>
 </html>

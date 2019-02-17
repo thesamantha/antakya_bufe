@@ -40,7 +40,7 @@
 
       <!--Menü-->
 
-      <ul>
+      <ul id="try">
         <li><a href="antakyahome.html">Kezdőlap</a></li>
         <li><a href="antakya_order.html">Étlap/Rendelés(később)</a></li>
         <li><a href="antakya_we.html">Rólunk</a></li>
@@ -48,6 +48,7 @@
         <li><a href="antakya_akciok.html">Akciók</a></li>
         <li><a href="antakya_galeria.html">Galéria</a></li>
         <li id="facebook"><a href="https://www.facebook.com/antakyadonerbudaors/" id="facebook"><img src="facebook.png" id="facebook" alt="facebook-icon"></a></li>
+        <li id="tripadvisor"><a href="https://www.tripadvisor.com/Restaurant_Review-g274886-d11435580-Reviews-Antakya_Torok_Food_Bar-Budaors_Pest_County_Central_Hungary.html" id="tripadvisor"><img src="trip.png" id="tripadvisor" alt="tripadvisor"></a></li>
       </ul>
 
     </nav>
@@ -89,9 +90,56 @@
         </form>
       </div>
 
+      <!--Automata képnézegető-->
+      <div class="kontener">
+
+        <div class="played-pic slip">
+          <div class="numTXT">1 / 3</div>
+          <img src="kepek/teavideo2.jpg" alt="Török Tea" class="VA" style="width:100%">
+          <p class="picTXT">Tea</p>
+        </div>
+
+        <div class="played-pic slip">
+          <div class="numTXT">4 / 4</div>
+          <img src="kepek/elviszed.jpg" alt="Kávé" class="VA" style="width:100%">
+          <div class="picTXT">ALT</div>
+        </div>
+
+        <div class="played-pic slip">
+          <div class="numTXT">4 / 4</div>
+          <img src="kepek/dontes.jpg" alt="Kávé" class="VA" style="width:100%">
+          <div class="picTXT">ALT</div>
+        </div>
+
+        <div class="played-pic slip">
+          <div class="numTXT">2 / 3</div>
+          <img src="kepek/falafel_red.jpg" alt="Kávé" class="VA" style="width:100%">
+          <div class="picTXT">ALT</div>
+        </div>
+
+        <div class="played-pic slip">
+          <div class="numTXT">3 / 3</div>
+          <img src="kepek/kanal.jpg" alt="Török Tea" class="VA" style="width:100%">
+          <div class="picTXT">Kínálat</div>
+        </div>
+
+        <div class="played-pic slip">
+          <div class="numTXT">4 / 4</div>
+          <img src="kepek/virag_tal2.jpg" alt="Kávé" class="VA" style="width:100%">
+          <div class="picTXT">ALT</div>
+        </div>
+
+        <div class="played-pic slip">
+          <div class="numTXT">4 / 4</div>
+          <img src="kepek/baklava.jpg" alt="Kávé" class="VA" style="width:100%">
+          <div class="picTXT">ALT</div>
+        </div>
+
+      </div>
+
       <!--Szerkeszthető tartalom-->
       <div id="edited-content">
-        <p>2014 Nyarán megynyít nagyszerű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics családi vállalkozás vagyunk akik
+        <p onclick="clickEvent()" style="cursor:pointer">2014 Nyarán megynyít nagyszerű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics családi vállalkozás vagyunk akik
         nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics
         családi vállalkozás vagyunk akik nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk. Nálunk vannak a legfinomabb
         török ételek a vársoban. Kics családi vállalkozás vagyunk nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk.
@@ -99,7 +147,7 @@
         2014 Nyarán megynyít nagyszeű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics családi vállalkozás vagyunk akik
         nagyon jó kajákat csinálnak...<br>
         ----------------------------------------------------------------------------------------------------------------------------------------------------------
-        </p>
+      </p>
       </div>
 
       <textarea name="editor" id="editor" placeholder="Anya, ide írd amit a hírfolyamban akarsz látni!"></textarea><br>
@@ -117,6 +165,7 @@
 
       <div class="social-media">
         <a href="https://www.facebook.com/antakyadonerbudaors/" id="facebook-bottom"><img src="facebook.png" id="facebook-bottom" alt="facebook-icon"></a>
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g274886-d11435580-Reviews-Antakya_Torok_Food_Bar-Budaors_Pest_County_Central_Hungary.html" id="tripadvisor-bottom"><img src="trip.png" id="tripadvisor-bottom" alt="tripadvisor"></a>
       </div>
 
       <!--Információk a lap alján is legyenek-->
@@ -137,9 +186,18 @@
             Vasárnap   Zárva
           </pre>
         </div>
+
+        <address class="adr">
+          Ezt az oldalt készítette: <br>
+          Konyhai Ottó <br>
+          és <br>
+          Samantha Webber
+        </address>
     </footer>
 
 <script src="bejelentkezo-ablak.js"></script>
+<script src="automaticSlideshow.js"></script>
+<script src="resizer.js"></script>
 
   </body>
 </html>
