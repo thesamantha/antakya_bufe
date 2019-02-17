@@ -44,22 +44,22 @@ input {
 }
 input:focus {background-color: lightblue; border-color: orange;}
 
-.right {
+.rbight {
   position: relative;
   left: 25em;
   bottom: 8.3em;
 }
-.right2 {
+.rbight2 {
   position: relative;
   left: 29em;
   bottom: 9.8em;
 }
-.down {
+.dbown {
   position: relative;
   left: 14em;
   bottom: 8em;
 }
-.down1 {
+.dbown1 {
   position: relative;
   left: 12em;
   bottom: 7em;

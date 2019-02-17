@@ -11,7 +11,6 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
-  header {background-image: }
   h2 {
     font-size: 5em;
     text-align: center;
@@ -200,10 +199,10 @@
     border: 1px solid black;
     border-radius: 5px;
   }
-  .ord-btn:hover {background-color: purple; color: }
+  .ord-btn:hover {background-color: purple;}
   .c-num {width: 4em;}
    #kepek {
-    width: 4em;
+    width: 8em;
     border-radius: 50%;
     cursor: pointer;
   }
@@ -257,8 +256,4 @@
     width: 3.5em;
     float: right;
   }
-
-
-
-
 }

@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>AntakyaBufeApp</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
+<html lang=hu dir="ltr">
+  <%= render "shared/header" %>
   <body>
+    <%= render "shared/menu" %>
+    <%= render "shared/login_registration" %>
     <%= yield %>
   </body>
+  <%= render "shared/footer" %>
 </html>

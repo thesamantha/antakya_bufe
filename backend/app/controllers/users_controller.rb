@@ -15,7 +15,6 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
-    render :layout => false
   end
 
   # GET /users/1/edit
@@ -29,6 +28,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        # Send email to notify user of successful registration
+        AppMailer.registration_email(@user).deliver_now
+
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else

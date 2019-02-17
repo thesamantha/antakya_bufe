@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to root_url, flash: { :success => "Üdvözöljünk, #{user.email}!" }
+      redirect_to root_url, flash: { :success => "Üdvözöljünk, #{user.name}!" }
     else
       redirect_to root_url, flash: { :error => "Emaile vagy jelszavad nem stimmel."}
     end
