@@ -8,6 +8,8 @@
   }
   hr {color: orange; position: relative; bottom: 10em;}
   hr.moving {position: relative; top: 5em;}
+  ::-moz-selection {background-color: black; color: darkgreen}
+  ::selection {background-color: black; color: darkgreen}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
@@ -45,7 +47,7 @@
     border-bottom: 0;
     width: auto;
   }
-  li:hover a:hover {background-color: green;}
+  li:hover a:hover {background-color: green; transition: 0.8s}
   #facebook {
     position: relative;
     left: 0;
@@ -57,7 +59,7 @@
     width: 2em;
     float: right;
   }
-  #facebook:hover {background-color: inherit;}
+  #facebook:hover {background-color: none;}
   #tripadvisor {
     position: relative;
     left: -6px;
@@ -194,6 +196,7 @@
   table, th, td {
     border: 1.7px solid black;
     border-collapse: collapse;
+    margin:auto;
   }
   .responsive {
     position: relative;

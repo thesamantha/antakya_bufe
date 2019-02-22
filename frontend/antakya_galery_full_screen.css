@@ -8,6 +8,8 @@
   }
   hr {color: orange; position: relative; bottom: 10em;}
   hr.moving {position: relative; top: 5em;}
+  ::-moz-selection {background-color: black; color: darkgreen}
+  ::selection {background-color: black; color: darkgreen}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
@@ -45,7 +47,7 @@
     border-bottom: 0;
     width: auto;
   }
-  li:hover a:hover {background-color: green;}
+  li:hover a:hover {background-color: green; transition: 0.8s}
   #facebook {
     position: relative;
     left: 0;
