@@ -92,6 +92,7 @@
     border-radius: 5px;
     max-width: 160px;
     margin-top: 5px;
+    cursor: pointer;
   }
   .login:hover, .registration-link:hover {background-color: blue; color: white}
 
@@ -219,7 +220,7 @@
   }
   .modalll-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: black;
     margin: auto;
     padding: 0;
     width: 90%;
