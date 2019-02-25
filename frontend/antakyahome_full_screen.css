@@ -91,6 +91,7 @@
     border-radius: 5px;
     max-width: 160px;
     margin-top: 5px;
+    cursor: pointer;
   }
   .login:hover, .registration-link:hover {background-color: blue; color: white}
 

@@ -5,8 +5,11 @@
     background-color: #b30000;
     background-image: linear-gradient(#b30000, #ff0000);
     color:orange;
+    overflow-x: hidden;
   }
   hr {color: orange; position: relative; bottom: 8em;}
+  ::-moz-selection {background-color: black; color: darkgreen}
+  ::selection {background-color: black; color: darkgreen}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
@@ -53,6 +56,18 @@
     left: 15.5vw;
   }
   #facebook:hover {background-color: red;}
+  #tripadvisor {
+    margin: auto;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3em;
+    position: absolute;
+    bottom: 7.4em;
+    left: 15.5vw;
+  }
+  #tripadvisor:hover {background: none;}
+
 
   nav {position: relative; bottom: 10em;}
 
@@ -72,6 +87,7 @@
     border-radius: 5px;
     max-width: 160px;
     margin-top: 5px;
+    cursor: pointer;
   }
   .registration-link a:link {color:black; text-decoration: none;}
   .registration-link a:visited {color:black; text-decoration: none;}
@@ -102,16 +118,6 @@
       margin-top: 5px;
     }
 
-    .bej {
-    border: 1px solid black;
-    background-color: green;
-    color:black;
-    padding: 18px;
-    font-size: 18px;
-    border-radius: 5px;
-    max-width: 160px;
-    margin-top: 5px;
-  }
   .cancelbtn {
       width:auto;
       padding: 10px 18px;
@@ -179,6 +185,69 @@
       from {transform: scale(0)}
       to {transform: scale(1)}
     }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+    /*Automata képnézegető*/
+    .played-pic {display: none;}
+    .VA {
+      vertical-align: middle;
+      height: 400px;
+      border-radius: 10px;
+      border: 5px dotted orange;
+      -webkit-animation-name: scrl;
+      -webkit-animation-duration: 1.5s;
+      -webkit-animation-delay: 4s;
+      animation-name: scrl;
+      animation-duration: 1.5s;
+      animation-delay: 4s;
+    }
+    .kontener {
+      max-width: 90vw;
+      max-height: 60em;
+      position:relative;
+      bottom: 8em;
+      margin: auto;
+    }
+    .picTXT {
+      color: #f2f2f2;
+      font-size: 0.5em;
+      padding: 0.25em 0.35em;
+      position: absolute;
+      bottom: 0.25em;
+      width: 100%;
+      text-align: center;
+    }
+    .numTXT {
+      color: #f2f2f2;
+      font-size: 0.4em;
+      padding: 0.25em 0.35em;
+      position: absolute;
+      top: 0;
+    }
+    .slip {
+      position: relative;
+      -webkit-animation-name: slide;
+      -webkit-animation-duration: 1.8s;
+      animation-name: slide;
+      animation-duration: 1.8s;
+    }
+    @-webkit-keyframes slide {
+        from {transform: rotateX(90deg)}
+        to {transform: rotateX(0deg)}
+    }
+    @keyframes slide {
+        from {transform: rotateX(90deg)}
+        to {transform: rotateX(0deg)}
+    }
+    @-webkit-keyframes scrl {
+      from {transform: rotateX(0);}
+      to {transform: rotateX(90deg);}
+    }
+    @keyframes scrl {
+      from {transform: rotateX(0);}
+      to {transform: rotateX(90deg);}
+    }
+
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Hírfolyam*/
   #edited-content {
@@ -211,7 +280,17 @@
     border-radius: 50%;
     width: 3em;
   }
-
+  #tripadvisor-bottom {
+    position: relative;
+    left: 1.5em;
+    top: 3em;
+    display: block;
+    margin: 1em auto;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3em;
+  }
 
 
 

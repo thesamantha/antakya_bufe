@@ -5,6 +5,7 @@
     background-color: #b30000;
     background-image: linear-gradient(#b30000, #ff0000);
     color:orange;
+    overflow-x: hidden;
   }
   hr {color: orange; position: relative; bottom: 10em;}
   hr.moving {position: relative; top: 5em;}
@@ -91,6 +92,7 @@
     border-radius: 5px;
     max-width: 160px;
     margin-top: 5px;
+    cursor: pointer;
   }
   .login:hover, .registration-link:hover {background-color: blue; color: white}
 

@@ -5,8 +5,11 @@
     background-color: #b30000;
     background-image: linear-gradient(#b30000, #ff0000);
     color:orange;
+    overflow-x: hidden;
   }
   hr {color: orange}
+  ::-moz-selection {background-color: black; color: darkgreen}
+  ::selection {background-color: black; color: darkgreen}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
@@ -42,6 +45,7 @@
   }
   li:hover a:hover {background-color: green;}
   #facebook {display: none;}
+  #tripadvisor {display: none;}
 
 
 
@@ -59,6 +63,7 @@
     border-radius: 5px;
     max-width: 160px;
     margin-top: 5px;
+    cursor: pointer;
   }
   .registration-link a:link {color:black; text-decoration: none;}
   .registration-link a:visited {color:black; text-decoration: none;}
@@ -158,6 +163,69 @@
     from {transform: scale(0)}
     to {transform: scale(1)}
   }
+
+
+  /*-------------------------------------------------------------------------------------------------------------------------------------------*/
+  /*Automata képnézegető*/
+  .played-pic {display: none;}
+  .VA {
+    vertical-align: middle;
+    height: 400px;
+    border-radius: 10px;
+    border: 5px dotted orange;
+    -webkit-animation-name: scrl;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-delay: 4s;
+    animation-name: scrl;
+    animation-duration: 1.5s;
+    animation-delay: 4s;
+  }
+  .kontener {
+    max-width: 90vw;
+    max-height: 60em;
+    position:relative;
+    margin: auto;
+  }
+  .picTXT {
+    color: #f2f2f2;
+    font-size: 0.5em;
+    padding: 0.25em 0.35em;
+    position: absolute;
+    bottom: 0.25em;
+    width: 100%;
+    text-align: center;
+  }
+  .numTXT {
+    color: #f2f2f2;
+    font-size: 0.4em;
+    padding: 0.25em 0.35em;
+    position: absolute;
+    top: 0;
+  }
+  .slip {
+    position: relative;
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 1.8s;
+    animation-name: slide;
+    animation-duration: 1.8s;
+  }
+  @-webkit-keyframes slide {
+      from {transform: rotateY(90deg)}
+      to {transform: rotateY(0deg)}
+  }
+  @keyframes slide {
+      from {transform: rotateY(90deg)}
+      to {transform: rotateY(0deg)}
+  }
+  @-webkit-keyframes scrl {
+    from {transform: rotateY(0);}
+    to {transform: rotateY(90deg);}
+  }
+  @keyframes scrl {
+    from {transform: rotateY(0);}
+    to {transform: rotateY(90deg);}
+  }
+
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Hírfolyam*/
   #edited-content {
@@ -174,7 +242,7 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Alláb*/
-#map {margin: auto; display: block; width: 95vw;}
+#map {margin: auto; display: block; width: 90vw;}
 #facebook-bottom {
   position: relative;
   left: 0.8em;
@@ -185,6 +253,17 @@
   border-radius: 50%;
   width: 3em;
 }
+#tripadvisor-bottom {
+  position: relative;
+  left: 0.8em;
+  display: block;
+  margin: 1em auto;
+  padding: 0;
+  border: 0px;
+  border-radius: 50%;
+  width: 3em;
+}
+address {margin-left: auto; display: block; text-align: center; position: relative; left: 1em;}
 
 
 

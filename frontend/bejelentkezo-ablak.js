@@ -1,8 +1,10 @@
 
-var modal = document.getElementById("id01");
+var modalbx = document.getElementById("id01");
+
+document.body.addEventListener("keydown", function(event) {if (event.keyCode == 27) {modalbx.style.display = "none"} })
 
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modalbx.style.display = "none";
   }
 }
