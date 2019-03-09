@@ -20,24 +20,28 @@
       <p>Egyéni kevezményekért és az egyszerűbb előrendelés felvételhez illetve kiszállításhoz kérjük töltse ki az alábbi mezőket.</p>
     </header>
     <hr>
+    <form class="reg" action="antakyahome.html">
     <div class="border">
-      <form class="reg" action="antakyahome.html">
+      <div class="left">
         <label for="fname">Teljes név</label><br>
         <input type="text" name="fname" placeholder="Írja be a teljes nevét!" required><br>
         <label for="uname">Felhasználonév</label><br>
         <input type="text" name="uname" placeholder="Találjon ki magának egy jól csengő felhasználónevet!" required><br>
-        <label for="adr" class="right">Cím (nem kötelező)</label><br>
-        <input type="text" name="adr" class="right2" placeholder="Azt a címed adja meg ahova az ételeket fogja rendelni!" required><br>
-        <label for="tel" class="right">Telefonszám (nem kötelező)</label><br>
-        <input type="text" name="tel" class="right2" placeholder="Hogy az előrendelésnél fel tudjuk venni önnel a kapcsolatot kérjük adjon meg egy előrhetőséget!"><br>
-        <label for="pass" class="down1">Jelszó</label><br>
-        <input type="passworld" class="down" name="pass" placeholder="Válasszon egy erős jelszót!" required><br>
-        <label for="pass2" class="down1">Jelszó ismétlése</label><br>
-        <input type="password" name="pass2" class="down" placeholder="Írja be jelszavát még egyszer!" required><br>
-      </form>
-    </div>
-    <button type="submit" name="submit" class="reg" onclick="window.location.href='antakyahome.html'">Regisztráció</button><br>
-    <button type="button" class="megse" onclick="window.history.back()">Mégse</button><br>
+      </div>
+      <div class="right">
+        <label for="adr">Cím (nem kötelező)</label><br>
+        <input type="text" name="adr" placeholder="Azt a címed adja meg ahova az ételeket fogja rendelni!"><br>
+        <label for="tel">Telefonszám (nem kötelező)</label><br>
+        <input type="text" name="tel" placeholder="Hogy az előrendelésnél fel tudjuk venni önnel a kapcsolatot kérjük adjon meg egy előrhetőséget!"><br>
+      </div>
+        <label for="pass" id="down">Jelszó</label><br>
+        <input type="passworld" name="pass" placeholder="Válasszon egy erős jelszót!" required><br>
+        <label for="pass2">Jelszó ismétlése</label><br>
+        <input type="password" name="pass2" placeholder="Írja be jelszavát még egyszer!" required><br>
+      </div>
+      <button type="submit" name="submit" class="reg" onclick="window.location.href='antakyahome.html'">Regisztráció</button><br>
+      <button type="button" class="megse" onclick="window.history.back()">Mégse</button><br>
+    </form>
 
   </body>
 </html>
