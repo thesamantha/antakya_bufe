@@ -1,10 +1,23 @@
 function openModal() {
   document.getElementById('myModal').style.display = "block";
 }
-
+/*------------------------------------Gombnyomásra képcsere vagy kilépés-----------------------------------*/
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.keyCode == 27) {
+        document.getElementById('myModal').style.display = "none";
+    }
+    else if (evt.keyCode == 37) {
+      plusSlides(-1)
+    }
+    else if (evt.keyCode == 39) {
+      plusSlides(1)
+    }
+};
+/*------------------------------------Gombnyomásra képcsere vagy kilépés vége-----------------------------------*/
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
-}
+  }
 
 var slideIndex = 1;
 showSlides(slideIndex);

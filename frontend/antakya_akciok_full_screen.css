@@ -5,9 +5,12 @@
     background-color: #b30000;
     background-image: linear-gradient(#b30000, #ff0000);
     color:orange;
+    overflow-x: hidden;
   }
   hr {color: orange; position: relative; bottom: 10em;}
   hr.moving {position: relative; top: 5em;}
+  ::-moz-selection {background-color: black; color: darkgreen}
+  ::selection {background-color: black; color: darkgreen}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
@@ -45,7 +48,7 @@
     border-bottom: 0;
     width: auto;
   }
-  li:hover a:hover {background-color: green;}
+  li:hover a:hover {background-color: green; transition: 0.8s}
   #facebook {
     position: relative;
     left: 0;
@@ -89,6 +92,7 @@
     border-radius: 5px;
     max-width: 160px;
     margin-top: 5px;
+    cursor: pointer;
   }
   .login:hover, .registration-link:hover {background-color: blue; color: white}
 
@@ -214,6 +218,7 @@
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Alláb*/
 
+  address {margin-left: auto; display: block; text-align: center;}
   #open_hours2 {text-align: right; position: relative; bottom: 8em;}
   #map {position: relative; top: 15em; left: 2em; margin: auto; display: block; width: 27em; height: 20em;}
   #facebook-bottom {

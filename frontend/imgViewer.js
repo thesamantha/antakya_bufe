@@ -1,4 +1,7 @@
 var modal = document.getElementById("imgModal");
+
+document.body.addEventListener("keydown", function(event) {if (event.keyCode == 27) {modal.style.display = "none"}})
+
 function myFunction(imgs) {
   var expandImg = document.getElementById("t-img");
   var imgTxt = document.getElementById("caption");

@@ -9,11 +9,14 @@ function pipa() {
   var ingredients4 = document.getElementsByName("ingredients4");
   var megjegyzes = document.getElementsByName("megjegyzes");
   var food = document.getElementsByTagName("H3");
+  var test = document.getElementById("test")
+
 
 
   for (var y = 0; y < food.length; y++) {
-    for (var z = 0; z < food.length; z++) {
-      if (food[y].isEqualNode(food[z]) == true) {
+    for (var z = 1; z < food.length; z++) {
+      if (food[y].innerHTML.localeCompare(food[z].innerHTML) == 0) {
+        test.innerHTML = typeof food[y]
         for (i = 0; i < ingredients.length; i++) {
           for (x = 0; x < megjegyzes.length; x++) {
             ingredients[i].addEventListener("click", most)
@@ -29,7 +32,7 @@ function pipa() {
             }
 
             function most() {
-              for (i = 0; i < ingredients.length; i++) {
+                for (i = 0; i < ingredients.length; i++) {
                   for (x = 0; x < megjegyzes.length; x++) {
                     if (mainCBox.checked == true) {
                       if (ingredients[i].checked == true) {
