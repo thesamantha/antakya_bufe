@@ -16,6 +16,9 @@
     letter-spacing: -10px;
     line-height: 0.3
   }
+  li {
+    list-style-type: none
+  }
   h1 {
     text-align: center;
     text-shadow: 2px 1px 1px black;
@@ -94,25 +97,24 @@
     color: white;
     transition: 1s;
   }
-  #minden {
-    transform: scale(1.5);
+  #ALL   {
+    transform: scale(2);
+  }
+  #positionforall {
+    margin: 3em auto;
+    display: block;
+    max-width: 25em;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border: 3px solid orange;
+    border-radius: 20px;
+    padding: 0.5em 1em;
   }
   #bank {
     font-size: 1.4em;
     font-weight: bold;
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
