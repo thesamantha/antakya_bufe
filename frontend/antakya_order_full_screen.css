@@ -22,7 +22,7 @@
     text-shadow: 2px 1px 1px black;
   }
   pre {
-    font-family: sans-serif;
+    font-family: serif;
     font-size: 1.3em;
   }
   #open_hours {text-align: right; position: relative; bottom: 8em;}
@@ -195,10 +195,12 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Táblázat*/
-  table, th, td {
-    border: 1.7px solid black;
-    border-collapse: collapse;
-    margin:auto;
+  table {
+    overflow: hidden;
+    border-radius: 20px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: auto;
   }
   .responsive {
     position: relative;
@@ -224,7 +226,7 @@
     padding: 0.5em 1em;
     font-size: 2em;
     font-weight: bold;
-    margin: 1em;
+    margin: 1em auto;
     display: block;
     border: 2px solid orange;
     border-radius: 15px;
@@ -235,6 +237,14 @@
     width: 4em;
     border-radius: 50%;
     cursor: pointer;
+  }
+  .rendelt {
+    display: none;
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    border: 5px solid orange;
+    border-radius: 20px;
   }
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Képnagyító*/

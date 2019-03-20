@@ -22,7 +22,7 @@
     text-shadow: 2px 1px 1px black;
   }
   pre {
-    font-family: sans-serif;
+    font-family: serif;
     font-size: 1.3em;
   }
   #open_hours {text-align: right; position: relative; bottom: 8em;}
@@ -210,8 +210,8 @@
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
-    height: 85%;
+    padding-top: 50px;
+    height: 95%;
     left: 0;
     top: 0;
     width: 100%;
@@ -269,6 +269,9 @@
     background-color: black;
     padding: 2px 16px;
     color: white;
+  }
+  .column img {
+    box-shadow: 0 0 25px black;
   }
   .column2 {float: left; margin: 5px; align: center}
   img.demo {opacity: 0.6; float: left; width: 200px; }

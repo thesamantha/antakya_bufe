@@ -8,6 +8,8 @@
     overflow-x: hidden;
   }
   hr {color: orange; position: relative; bottom: 8em;}
+  ::-moz-selection {background-color: black; color: darkgreen}
+  ::selection {background-color: black; color: darkgreen}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
@@ -19,7 +21,7 @@
     text-shadow: 2px 1px 1px black;
   }
   pre {
-    font-family: sans-serif;
+    font-family: serif;
     font-size: 1em;
   }
   #open_hours {text-align: right; position: relative; bottom: 8em;}

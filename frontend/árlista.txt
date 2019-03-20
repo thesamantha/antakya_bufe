@@ -1,0 +1,23 @@
+DÖner = 850 Ft 
+Sültkrumplis döner = 880 Ft
+Fetás Döner = 930 FT
+Krumplis Fetás Döner = 980 FT
+Humuszos = 880 Ft
+Pirított hagymás = 880 FT
+extra husos = 1050 FT
+Extra csípős = 880 Ft
+----------------------------------------------------------------
+Bárányos döner = 1050 FT 
+Bárány tál = 1650 Ft 
+Bárány tál elvitelre = 1680 Ft
+Bárány menü (baklava, udítő, döner) = 1560 FT
+-----------------------------------------------------------------
+Csirkés tál helyben = 1490 Ft
+Csirkés tál elvitelre = 1530 Ft
+-----------------------------------------------------------------
+Csrikés döner menü (döner, udítő 0,33) = 1100 Ft
+Krumplis menü (döner, krumpli, üdítő 0,33) = 1750 Ft
+Tál menü (gyros tál, üdítő 0,33) = 
+
+
+

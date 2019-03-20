@@ -32,7 +32,6 @@ function order() {
   dplay.children[2].style.display = "none";                               //
 
   dplay.lastElementChild.innerHTML = orderNum + " db = " + price * orderNum + " Ft"; //Kiszámítja a darabszámot és az árat
-  dplay.style.verticalAlign = "center";
   var insert = dplay.appendChild(btnplc);                                             // Egy TD elem hozzáadása a másolt táblázathoz (a kosárban)
   insert.appendChild(megse);                                                           // Az előző sorban létrehozott TD elembe beleraka a gombot ami törli majd az egész sort
 
@@ -41,4 +40,9 @@ function order() {
   dplay.children[2].style.border = "1px solid black";
   dplay.children[3].style.border = "1px solid black";
   dplay.children[4].style.border = "1px solid black";
+
+  dplay.style.verticalAlign = "middle";
+  dplay.style.margin = "auto";
+  dplay.style.maxWidth = "500px";
+  dplay.style.display = "block";
 }

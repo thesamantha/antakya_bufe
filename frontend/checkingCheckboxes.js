@@ -1,28 +1,44 @@
+var checkboxes = document.getElementsByClassName('ingredients');
+window.onload = responsiveChecks()
 
 document.getElementById("ALL").addEventListener('change', (event) => {
-  if (document,getElementById("ALL").checked == true) {
-    responsiveChecks()
-  }
+      responsiveChecks()
 })
 
 function responsiveChecks() {
-  var checkboxes = document.getElementsByClassName('ingredients');
-
-  for(var i = 0; i < checkboxes.length; i++)
-    checkboxes[i].addEventListener('change', (event) => {
-      if (event.target.checked) {
-        check(checkboxes, event.target.parentNode.parentNode.parentNode.children[0].innerHTML, event.target.value, true);
-      } else {
-        check(checkboxes, event.target.parentNode.parentNode.parentNode.children[0].innerHTML, event.target.value, false);
-      }
-  })
+  /*---------------------------------CSS-------------------------------------------*/
+  var background = document.getElementById("positionforall")
+  if (document.getElementById("ALL").checked == true) {
+    background.style.backgroundColor = "darkgreen"
+  }
+  else if (document.getElementById("ALL").checked == false) {
+    background.style.backgroundColor = "inherit"
+  }
+  /*------------------------------End CSS-------------------------------------------*/
+  for(var i = 0; i < checkboxes.length; i++) {
+      checkboxes[i].addEventListener('change', (event) => {
+        if (document.getElementById("ALL").checked == true) {
+          if (event.target.checked) {
+            check(event.target.parentNode.parentNode.parentNode.children[0].innerHTML, event.target.value, true);
+          }
+          else {
+            check(event.target.parentNode.parentNode.parentNode.children[0].innerHTML, event.target.value, false);
+          }
+        }
+        else if (document.getElementById("ALL").checked == false) {
+          this.removeEventListener('change', arguments.callee, false)
+        }
+      });
+    }
 }
-function check(checkboxes, food, value, check) {
+
+
+function check(food, value, checked) {
   for(var i = 0; i < checkboxes.length; i++) {
     if(checkboxes[i].parentNode.parentNode.parentNode.children[0].innerHTML == food) {
       if(checkboxes[i].value == value) {
-        checkboxes[i].checked = check;
+        checkboxes[i].checked = checked;
       }
     }
   }
-}
+} 

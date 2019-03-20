@@ -19,7 +19,7 @@
     text-shadow: 2px 1px 1px black;
   }
   pre {
-    font-family: sans-serif;
+    font-family: serif;
     font-size: 0.8em;
     text-align: center;
   }
@@ -242,6 +242,9 @@
     background-color: black;
     padding: 2px 16px;
     color: white;
+  }
+  .column img {
+    box-shadow: 0 0 25px black;
   }
   .column2 {float: left; margin: 5px; overflow-x: scroll;}
   img.demo {opacity: 0.6; float: left; width: 90px;}
