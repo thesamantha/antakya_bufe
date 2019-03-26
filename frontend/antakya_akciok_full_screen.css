@@ -194,27 +194,45 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Szerkesztő*/
-.editor-btn {
-  background-color: green;
-  border: 1px solid orange;
-  padding: 1em;
-  color:orange;
-  font-size: 1.2em;
-  margin: auto;
-  display: block;
-}
-
+/*------------------------------------------------------------------EDITORS------------------------------------------------------------------*/
 #editor {
-  position: relative;
   margin: auto;
   display: block;
-  font-size: 1.4em;
+  width: 80%;
+  font-size: 2em;
 }
 
+.editor-border {
+  margin: auto;
+  display: block;
+  border: 3px solid orange;
+  border-radius: 20px;
+  max-width: 30em;
+  padding: 2em;
+}
 
+.editor-btn {
+  margin: auto;
+  display: block;
+  margin-bottom: 5em;
+}
 
+#img-upload-submit {
+  margin: 1em auto;
+  display: block;
+  background-color: darkgreen;
+  color: orange;
+  border: 2px solid orange;
+  border-radius: 10px;
+  padding: 1em;
+  font-size: 1em;
+  width: 80%;
+}
 
-
+input[type=file] {
+  margin: auto;
+  display: block;
+}
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Alláb*/
 

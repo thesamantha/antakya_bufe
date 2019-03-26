@@ -95,8 +95,13 @@ Vasárnap   Zárva</pre>
 
       </div>
 
-      <textarea name="editor" id="editor" placeholder="Anya, ide írd amit a hírfolyamban akarsz látni!"></textarea><br>
-      <button type="button" class="editor-btn" onclick="textEdit()">Szerkeszt</button>
+      <form>
+        <div class="editor-border">
+          <textarea name="editor" id="editor" placeholder="Anya, ide írd amit a hírfolyamban akarsz látni!"></textarea><br>
+          <input type="file" name="image-uploader">
+          <input type="submit" name="img-upload-submit" id="img-upload-submit" value="Feltöltés">
+        </div>
+      </form>
 
     </main>
     <hr class="moving">

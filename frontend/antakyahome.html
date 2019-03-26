@@ -12,8 +12,8 @@
 <html class="no-js lt-ie9" lang="hu"> <![endif]-->
 <!--[if gt IE 8]><!-->
     <title>Antakya Török Büfé - Budaörs</title>
-    <link rel="stylesheet" href="antakyahome_mobile.css">
-    <link rel="stylesheet" href="antakyahome_tablet.css">
+    <link rel="stylesheet" href="antakyahome_mobil.css">
+    <link rel="stylesheet" href="antakyahome_table.css">
     <link rel="stylesheet" href="antakyahome_full_screen.css">
   </head>
   <body>
@@ -138,8 +138,11 @@
       </div>
 
       <!--Szerkeszthető tartalom-->
+      <input type="checkbox" id="checkbox">
+
+      </div>
       <div style="cursor:pointer" id="edited-content">
-        <p><label><input type="checkbox" id="checkbox" checked>2014 Nyarán megynyít nagyszerű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics családi vállalkozás vagyunk akik
+        <p><label for="checkbox">2014 Nyarán megynyít nagyszerű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics családi vállalkozás vagyunk akik
         nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics
         családi vállalkozás vagyunk akik nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk. Nálunk vannak a legfinomabb
         török ételek a vársoban. Kics családi vállalkozás vagyunk nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk.
@@ -149,10 +152,24 @@
         ----------------------------------------------------------------------------------------------------------------------------------------------------------
       </label></p>
       </div>
+      <div id="edited-content2" class="animate anti-animate">
+        <p><label for="checkbox">2014 Nyarán megynyít nagyszerű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics családi vállalkozás vagyunk akik
+        nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics
+        családi vállalkozás vagyunk akik nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk. Nálunk vannak a legfinomabb
+        török ételek a vársoban. Kics családi vállalkozás vagyunk nagyon jó kajákat csinálnak... 2014 Nyarán megynyít nagyszeű üzletünk.
+        Nálunk vannak a legfinomabb török ételek a vársoban. Kics családi vállalkozás vagyunk akik nagyon jó kajákat csinálnak...
+        2014 Nyarán megynyít nagyszeű üzletünk. Nálunk vannak a legfinomabb török ételek a vársoban. Kics családi vállalkozás vagyunk akik
+        nagyon jó kajákat csinálnak...<br>
+        ----------------------------------------------------------------------------------------------------------------------------------------------------------
+      </label></p>
 
-      <textarea name="editor" id="editor" placeholder="Anya, ide írd amit a hírfolyamban akarsz látni!"></textarea><br>
-      <button type="button" class="editor-btn" onclick="textEdit()">Szerkeszt</button>
-
+      <form>
+        <div class="editor-border">
+          <textarea name="editor" id="editor" placeholder="Anya, ide írd amit a hírfolyamban akarsz látni!"></textarea><br>
+          <input type="file" name="image-uploader">
+          <input type="submit" name="img-upload-submit" id="img-upload-submit" value="Feltöltés">
+        </div>
+      </form>
     </main>
     <hr class="moving">
 
@@ -197,7 +214,7 @@
 
 <script src="bejelentkezo-ablak.js"></script>
 <script src="automaticSlideshow.js"></script>
-<script src="resizer.js"></script>
+<script src="reizer.js"></script>
 
   </body>
 </html>
