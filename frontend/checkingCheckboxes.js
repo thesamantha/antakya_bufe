@@ -1,8 +1,10 @@
 var checkboxes = document.getElementsByClassName('ingredients');
+var textarea = document.getElementsByName("megjegyzes");
 window.onload = responsiveChecks()
 
 document.getElementById("ALL").addEventListener('change', (event) => {
       responsiveChecks()
+      megjegyzes()
 })
 
 function responsiveChecks() {
@@ -45,14 +47,21 @@ function check(food, value, checked) {
 
 
 /*-------------------------------------------megjegxzés---------------------------------------------------------*/
-var textarea = document.getElementsByName("megjegyzes");
-for (var i = 0; i < textarea.length; i++) {
-  textarea[i].addEventListener("keyup", (event) => {
-    var text = event.target.value
-      for (var i = 0; i < textarea.length; i++) {
-        var foodname = textarea[i].parentNode.children[0].innerHTML
-        if (event.target.parentNode.children[0].innerHTML == foodname)
-          textarea[i].value = text
+function megjegyzes() {
+  for (var i = 0; i < textarea.length; i++) {
+      textarea[i].addEventListener("keyup", (event) => {
+        if (document.getElementById("ALL").checked == true) {
+          var text = event.target.value
+          for (var i = 0; i < textarea.length; i++) {
+            var foodname = textarea[i].parentNode.children[0].innerHTML
+            if (event.target.parentNode.children[0].innerHTML == foodname) {
+              textarea[i].value = text
+          }
+        }
       }
-  })
+      else if (document.getElementById("ALL").checked == false) {
+        this.removeEventListener('keyup', arguments.callee, false)
+      }
+    })
+  }
 }
