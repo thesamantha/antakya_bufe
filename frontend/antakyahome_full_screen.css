@@ -298,13 +298,15 @@
     z-index: 3;
     padding-top: 2em;
     text-align: center;
-    width: 100%;
+    width: 99%;
     height: 100%;
     background-color: orange;
     overflow: scroll;
+    border: 8px solid green;
+  }
+  p > label {
     cursor: pointer;
   }
-
 
   #checkbox:checked ~ #edited-content {
     visibility: collapse;

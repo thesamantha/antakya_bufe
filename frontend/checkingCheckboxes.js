@@ -41,4 +41,18 @@ function check(food, value, checked) {
       }
     }
   }
-} 
+}
+
+
+/*-------------------------------------------megjegxzés---------------------------------------------------------*/
+var textarea = document.getElementsByName("megjegyzes");
+for (var i = 0; i < textarea.length; i++) {
+  textarea[i].addEventListener("keyup", (event) => {
+    var text = event.target.value
+      for (var i = 0; i < textarea.length; i++) {
+        var foodname = textarea[i].parentNode.children[0].innerHTML
+        if (event.target.parentNode.children[0].innerHTML == foodname)
+          textarea[i].value = text
+      }
+  })
+}
