@@ -89,6 +89,9 @@
     margin-top: 5px;
     cursor: pointer;
   }
+
+  .login:hover, .registration-link:hover {background-color: blue; color: white}
+
   .registration-link a:link {color:black; text-decoration: none;}
   .registration-link a:visited {color:black; text-decoration: none;}
   .registration-link a:hover {color:black; text-decoration: none;}
@@ -198,9 +201,12 @@
 
     /*-------------------------------------------------------------------------------------------------------------------------------------------*/
     /*Táblázat*/
-    table, th, td {
-      border: 1.7px solid black;
-      border-collapse: collapse;
+    table {
+      overflow: hidden;
+      border-radius: 20px;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: auto;
     }
     .responsive {overflow-x: auto; position: relative; bottom: 5em;}
     th, td {padding: 1em; text-align: center;}
@@ -233,6 +239,14 @@
       width: 4em;
       border-radius: 50%;
       cursor: pointer;
+    }
+    .rendelt {
+      display: none;
+      max-width: 80%;
+      margin: auto;
+      text-align: center;
+      border: 5px solid orange;
+      border-radius: 20px;
     }
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Képnagyító*/

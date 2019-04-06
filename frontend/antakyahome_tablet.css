@@ -89,6 +89,9 @@
     margin-top: 5px;
     cursor: pointer;
   }
+
+.login:hover, .registration-link:hover {background-color: blue; color: white}
+
   .registration-link a:link {color:black; text-decoration: none;}
   .registration-link a:visited {color:black; text-decoration: none;}
   .registration-link a:hover {color:black; text-decoration: none;}
@@ -200,6 +203,7 @@
       animation-name: scrl;
       animation-duration: 1.5s;
       animation-delay: 4s;
+      object-fit: fill;
     }
     .kontener {
       max-width: 90vw;
@@ -264,12 +268,46 @@
     max-width: 60em;
   }
 
-  /*------------------------------------------------------------------EDITORS------------------------------------------------------------------*/
+  #checkbox {
+    display: none;
+  }
+  #edited-content2 {
+    display: none;
+    color: black;
+    font-size: 1.5em;
+    transition: 1s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    padding-top: 2em;
+    text-align: center;
+    width: 99%;
+    height: 100%;
+    background-color: orange;
+    overflow: scroll;
+    border: 8px solid green;
+  }
+  p > label {
+    cursor: pointer;
+  }
+
+  #checkbox:checked ~ #edited-content {
+    visibility: collapse;
+    transition: 2s;
+  }
+
+  #checkbox:checked ~ #edited-content2 {
+    display: block;
+  }
+
   #editor {
     margin: auto;
     display: block;
     width: 80%;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .editor-border {
@@ -279,6 +317,8 @@
     border-radius: 20px;
     max-width: 30em;
     padding: 2em;
+    position: relative;
+    bottom: 9em;
   }
 
   .editor-btn {
@@ -303,18 +343,6 @@
     margin: auto;
     display: block;
   }
-
-
-  #checkbox {
-    display: block;
-  }
-
-
-
-  #checkbox:checked ~ #editor {
-    visibility: visible;
-  }
-
 
 
 

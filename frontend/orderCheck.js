@@ -35,12 +35,10 @@ function order() {
   var insert = dplay.appendChild(btnplc);                                             // Egy TD elem hozzáadása a másolt táblázathoz (a kosárban)
   insert.appendChild(megse);                                                           // Az előző sorban létrehozott TD elembe beleraka a gombot ami törli majd az egész sort
 
-  dplay.children[0].style.border = "1px solid black";
-  dplay.children[1].style.border = "1px solid black";
-  dplay.children[2].style.border = "1px solid black";
-  dplay.children[3].style.border = "1px solid black";
-  dplay.children[4].style.border = "1px solid black";
-
+  for (var i = 0; i < 5; i++) {
+    dplay.children[i].style.border = "1px solid black";
+  }
+  
   dplay.style.verticalAlign = "middle";
   dplay.style.margin = "auto";
   dplay.style.maxWidth = "500px";

@@ -46,7 +46,6 @@ function check(food, value, checked) {
 }
 
 
-/*-------------------------------------------megjegxzés---------------------------------------------------------*/
 function megjegyzes() {
   for (var i = 0; i < textarea.length; i++) {
       textarea[i].addEventListener("keyup", (event) => {
