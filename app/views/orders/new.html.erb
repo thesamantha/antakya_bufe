@@ -5,35 +5,11 @@
 <!--Táblázat-->
 <div class="responsive">
   <%= form_for @order do |order_form| %>
-    <table>
-        <tr>
-          <th>Kép</th>
-          <th>Név</th>
-          <th>Összetevők</th>
-          <th>Ár</th>
-          <th>Db</th>
-        </tr>
-        <%= order_form.fields_for :foods do |food_fields| %>
-          <tr>
-            <td><%= image_tag("#{food_fields.object.name}.jpg", id: "kepek", onclick: "myFunction(this)")%></td>
-            <td><%= food_fields.object.name %></td>
-            <%= food_fields.text_field :name, value: food_fields.object.name, hidden: true%>
-            <td class="ingradiesnts"><%= food_fields.object.ingredients %></td>
-            <%= food_fields.text_field :ingredients, value: food_fields.object.ingredients, hidden: true%>
-            <td><%= number_with_precision(food_fields.object.price, :precision => 2) %></td>
-            <%= food_fields.number_field :price, value: food_fields.object.price, hidden: true%>
-            <td><%= food_fields.number_field :quantity, class: "c-num" %></td>
-          </tr>
-        <% end %>
-    </table>
+    <%= render "#{@order.current_step}_step", order_form: order_form %>
     <br>
-  <%= order_form.submit "Rendelés", class: "ord-btn" %>
+    <% if @order.last_step? %>
+      <%= order_form.submit "Vissza", name:"back_button", class: "ord-btn" %>
+      <%= order_form.submit "Rendelés", class: "ord-btn" %>
+    <% end %>
   <% end %>
-</div>
-
-<!--Kép nagyító-->
-<div id="imgModal" class="modal animate">
-    <span class="X">&times;</span>
-    <img class="modal--content" id="t-img">
-    <div id="caption"></div>
 </div>

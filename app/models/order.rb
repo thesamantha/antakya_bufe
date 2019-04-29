@@ -4,10 +4,10 @@ class Order < ApplicationRecord
                                 allow_destroy: true,
                                 reject_if: lambda { |f| f[:quantity].blank? }
 
-  validates :foods, presence: true
-  validates :customer_name, presence: true
-  validates :address, presence: true
-  validates :tele, presence: true
+  validates :foods, presence: true, :if => lambda { |o| o.current_step == "delivery" }
+  validates :customer_name, presence: true, :if => lambda { |o| o.current_step == "delivery" }
+  validates :address, presence: true, :if => lambda { |o| o.current_step == "delivery" }
+  validates :tele, presence: true, :if => lambda { |o| o.current_step == "delivery" }
 
 
   # logic for multiple-step order

@@ -1,34 +1,40 @@
 class OrdersController < ApplicationController
   def new
-    @order = Order.new()
+    session[:order_params] ||= {}
+    @order = Order.new(session[:order_params])
+    @order.current_step = session[:order_step]
 
     Food::NAMES.each_with_index do |name, index|
       @order.foods.build(name: name, price: Food::PRICES[index], ingredients: Food::INGREDIENTS[index])
     end
   end
 
-
-  # grab id of food and count from that id's column, add one for each count?
   def create
-    @order = Order.new(order_params)
 
-    #set order as not yet completed
-    @order.finished = false
-    #sum up order total from price of each item ordered (multiplied by quantity of each item)
-    @order.total = 0
-    @order.foods.each do |food|
-      @order.total += food.price*food.quantity
+    session[:order_params].deep_merge!(params[:order]) if params[:order]
+    @order = Order.new(session[:order_params])
+    @order.current_step = session[:order_step]
+    if params[:back_button]
+      @order.previous_step
+    elsif @order.last_step?
+      @order.save
+    else
+      @order.next_step
     end
+    session[:order_step] = @order.current_step
 
-    respond_to do |format|
-      if @order.save
-        AppMailer.order_email(User.find(email: "samanthatitewebber@gmail.com"), @order).deliver_now
-        format.html { redirect_to root_path, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
-      else
-        format.html { render root_path, notice: 'Error in creating order.' }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+    binding.irb
+    if @order.new_record? && !@order.last_step?
+      @order.foods.destroy_all
+      Food::NAMES.each_with_index do |name, index|
+        @order.foods.build(name: name, price: Food::PRICES[index], ingredients: Food::INGREDIENTS[index])
       end
+      render "new"
+    else
+      session[:order_step] = session[:order_params] = nil
+      AppMailer.order_email(User.find_by(email: "samanthatitewebber@gmail.com"), @order).deliver_now
+      flash[:notice] = "Order was successfully created."
+      redirect_to root_path
     end
   end
 

@@ -1,16 +1,20 @@
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1150px) {
 
   /*Háttér és betűszín*/
   body {
     background-color: #b30000;
     background-image: linear-gradient(#b30000, #ff0000);
     color:orange;
+    overflow-x: hidden;
   }
   hr {color: orange; position: relative; bottom: 10em;}
   hr.moving {position: relative; top: 5em;}
+  ::-moz-selection {background-color: black; color: darkgreen}
+  ::selection {background-color: black; color: darkgreen}
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
   /*Fejléc*/
+  header {background-image: }
   h2 {
     font-size: 5em;
     text-align: center;
@@ -18,7 +22,7 @@
     text-shadow: 2px 1px 1px black;
   }
   pre {
-    font-family: sans-serif;
+    font-family: serif;
     font-size: 1.3em;
   }
   #open_hours {text-align: right; position: relative; bottom: 8em;}
@@ -44,7 +48,7 @@
     border-bottom: 0;
     width: auto;
   }
-  li:hover a:hover {background-color: green;}
+  li:hover a:hover {background-color: green; transition: 0.8s}
   #facebook {
     position: relative;
     left: 0;
@@ -56,7 +60,19 @@
     width: 2em;
     float: right;
   }
-  #facebook:hover {background-color: inherit;}
+  #facebook:hover {background-color: none;}
+  #tripadvisor {
+    position: relative;
+    left: -6px;
+    bottom: 0;
+    margin: 0.08em 0.1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 2em;
+    float: right;
+  }
+  #tripadvisor:hover {background: none;}
 
   nav {position: relative; bottom: 10em}
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -77,6 +93,7 @@
     border-radius: 5px;
     max-width: 160px;
     margin-top: 5px;
+    cursor: pointer;
   }
   .login:hover, .registration-link:hover {background-color: blue; color: white}
 
@@ -178,9 +195,12 @@
 
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Táblázat*/
-  table, th, td {
-    border: 1.7px solid black;
-    border-collapse: collapse;
+  table {
+    overflow: hidden;
+    border-radius: 20px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: auto;
   }
   .responsive {
     position: relative;
@@ -199,12 +219,32 @@
     border: 1px solid black;
     border-radius: 5px;
   }
-  .ord-btn:hover {background-color: purple;}
+  .ord-btn:hover {background-color: purple; color: }
+  .order-btn {
+    background-color: green;
+    color: orange;
+    padding: 0.5em 1em;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 1em auto;
+    display: block;
+    border: 2px solid orange;
+    border-radius: 15px;
+    cursor: pointer;
+  }
   .c-num {width: 4em;}
    #kepek {
-    width: 8em;
+    width: 4em;
     border-radius: 50%;
     cursor: pointer;
+  }
+  .rendelt {
+    display: none;
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    border: 5px solid orange;
+    border-radius: 20px;
   }
 /*-------------------------------------------------------------------------------------------------------------------------------------------*/
 /*Képnagyító*/
@@ -256,4 +296,18 @@
     width: 3.5em;
     float: right;
   }
+  #tripadvisor-bottom {
+    position: relative;
+    top: -3em;
+    left: 0;
+    margin: 0 1em 0 0;
+    padding: 0;
+    border: 0px;
+    border-radius: 50%;
+    width: 3.5em;
+    float: right;
+  }
+
+
+
 }
